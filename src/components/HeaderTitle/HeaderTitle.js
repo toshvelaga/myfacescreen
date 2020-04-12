@@ -1,6 +1,8 @@
 import React from 'react';
 import usaflag from '../../assets/usa-flag.svg'
 
+import './HeaderTitle.css'
+
 const HeaderTitle = () => {
     return (<>
     <div className="HeaderTitleContainer">
@@ -16,8 +18,9 @@ const HeaderTitle = () => {
                 <img src={usaflag} style={{width: '35px', height: '35px'}} />
             </div>
         </div>
-
+    <hr className="dividerLine"/>
     </div>
+
     </>);
 }
  
