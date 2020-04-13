@@ -5,7 +5,7 @@ import './HeaderTitle.css'
 
 const HeaderTitle = () => {
     return (<>
-    <div className="HeaderTitleContainer">
+    <div style={{marginTop: '1rem'}} className="HeaderTitleContainer">
         <div style={{float: 'left', marginLeft: '2rem'}}>
             <h6>MY FACE SCREEN</h6>
         </div>
@@ -18,8 +18,12 @@ const HeaderTitle = () => {
                 <img src={usaflag} style={{width: '35px', height: '35px'}} />
             </div>
         </div>
-    <hr className="dividerLine"/>
     </div>
+
+    <hr style={{width: '100%', height: '1px', border: '0', backgroundColor: '#eeeae6', marginTop: '3rem'}}/>
+
+
+
 
     </>);
 }

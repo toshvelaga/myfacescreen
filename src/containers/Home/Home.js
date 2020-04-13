@@ -23,7 +23,9 @@ class Home extends Component {
             <span style={{marginLeft: '.8rem'}}>
                 <GreyBtn text="See Trending" />
             </span>
-            <Footer />
+            <div style={{marginTop: '5rem'}}>
+                <Footer />
+            </div>
         </>);
     }
 }
