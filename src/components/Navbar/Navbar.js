@@ -2,6 +2,7 @@ import React from 'react';
 import './Navbar.css'
 import medicalmask from '../../assets/medical-mask.svg'
 import Hamburger from '../Hamburger/Hamburger'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (<>
@@ -9,7 +10,7 @@ const Navbar = () => {
     <div className="mainNavbar">
         <div><Hamburger /></div>
         <span>MENU</span>
-        <span>GET STARTED</span>
+        <Link to="get-started"><span>GET STARTED</span></Link>
         <span>PRODUCTS</span>
         <span>GIFT</span>
         
