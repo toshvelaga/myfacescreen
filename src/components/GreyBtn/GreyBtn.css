@@ -1,6 +1,6 @@
-.OrangeBtn {
-    background-color: #ff6002;
-    color: white;
+.GreyBtn {
+    background-color: #fcfbf9;
+    color: #595b5a;
     font-weight: bold;
     /* font-size: 1rem; */
     text-transform: uppercase;
@@ -10,6 +10,6 @@
     border-radius: 50px;
 }
 
-.OrangeBtn:hover {
-    background-color: #fc7121;
+.GreyBtn:hover {
+    background-color: whitesmoke;
 }
