@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Hamburger.css'
+import { Link } from 'react-router-dom';
 
 // codepen: https://codepen.io/designcouch/pen/Atyop
 
@@ -9,7 +10,7 @@ class Hamburger extends Component {
     }
     
     openNav = () => {
-        this.setState({width: '250px'})
+        this.setState({width: '335px'})
     }
 
     closeNav = () => {
@@ -20,10 +21,10 @@ class Hamburger extends Component {
         return (<>      
             <div id="mySidenav" style={{width: this.state.width}} class="sidenav">
                 <a class="closebtn" onClick={this.closeNav}>&times;</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Clients</a>
-                <a href="#">Contact</a>
+                <Link to="/home">HOME</Link>
+                <Link to="/get-started">GET STARTED</Link>
+                <Link to="products">OUR PRODUCTS</Link>
+                <Link to="/gift">GIFT THE MASK</Link>
             </div>
 
             <div id="nav-icon1" onClick={this.openNav}>
