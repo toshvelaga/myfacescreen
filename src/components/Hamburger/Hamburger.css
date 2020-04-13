@@ -1,0 +1,29 @@
+
+  #nav-icon1 {
+    width: 30px;
+    height: 22.5px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  #nav-icon1 span {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: black;
+    border-radius: 9px;
+  }
+  
+  #nav-icon1 span:nth-child(1) {
+    top: 9px;
+  }
+  
+  #nav-icon1 span:nth-child(2) {
+    top: 18px;
+  }
+  
+  #nav-icon1 span:nth-child(3) {
+    top: 27px;
+  }
+  
+  
