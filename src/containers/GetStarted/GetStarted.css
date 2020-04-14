@@ -1,0 +1,14 @@
+.part2card {
+    border: 1px solid gray;
+    width: 33%;
+    padding: 1rem;
+    margin: 1rem;
+    height: 6rem;
+    display: inline-block
+}
+
+.part2 > p {
+    margin-top: 5rem;
+    vertical-align: middle;
+    /* margin-bottom: 5rem; */
+}
