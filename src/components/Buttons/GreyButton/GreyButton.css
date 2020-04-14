@@ -1,4 +1,4 @@
-.GreyBtn {
+.GreyButton {
     background-color: #fcfbf9;
     color: #595b5a;
     font-weight: bold;
@@ -10,6 +10,6 @@
     border-radius: 50px;
 }
 
-.GreyBtn:hover {
+.GreyButton:hover {
     background-color: whitesmoke;
 }

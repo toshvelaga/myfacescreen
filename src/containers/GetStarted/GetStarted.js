@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import HeaderTitle from '../../components/HeaderTitle/HeaderTitle';
 import QuizHeader from '../../components/QuizHeader/QuizHeader';
 import facemask_BLACK from '../../assets/facemask_BLACK.png'
-import PurpleButton from '../../components/PurpleButton/PurpleButton';
+import PurpleButton from '../../components/Buttons/PurpleButton/PurpleButton';
 
 import './GetStarted.css'
 
 class GetStarted extends Component {
     state = { 
-        part2: 'none'
+        part2: 'none',
+        part3: 'none'
     }
 
     showDiv2 = () => {
@@ -35,6 +36,17 @@ class GetStarted extends Component {
                 <PurpleButton fx={() => alert('logic for div2')} />
             </div>
         </div>
+
+        <div style={{display: this.state.part3}} className="part3">
+            <p>Let's create your face screen</p>
+            <div className="part2card">Use my face.</div>
+            <div className="part2card">Upload my own design.</div>
+            <div className="part2card">Pick from Trending.</div>
+            <div>
+                <PurpleButton fx={() => alert('logic for div2')} />
+            </div>
+        </div>
+        
 
         </>);
     }
