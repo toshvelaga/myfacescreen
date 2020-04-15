@@ -10,7 +10,8 @@ import './GetStarted.css'
 class GetStarted extends Component {
     state = { 
         part2: 'none',
-        part3: 'none'
+        part3: 'none',
+        part4: 'none'
     }
 
     showDiv2 = () => {
@@ -19,6 +20,10 @@ class GetStarted extends Component {
 
     showDiv3 = () => {
         this.setState({part3: 'contents'})
+    }
+
+    showDiv4 = () => {
+        this.setState({part4: 'contents'})
     }
     
     render() { 
@@ -57,11 +62,46 @@ class GetStarted extends Component {
             </div>
                 <PurpleButton color="purple" name="Click to add another member" />
             <div style={{marginTop: '2rem'}}>
-                <SquareButton fx={() => alert('logic for div2')} />
+                <SquareButton fx={this.showDiv4} />
+            </div>
+        </div>
+
+        {/* CONTAINER 4 */}
+
+        <div style={{display: this.state.part4}} className="part4">
+            <div style={{float: 'left'}}>
+                <div>
+                    <img src={facemask_BLACK} style={{width: '20rem', height: '22rem'}} />
+                </div>
+                <PurpleButton color="purple" name="GET THE STARTER PACK" />
+            </div>
+
+            <div style={{float: 'right', width: '33%', textAlign: 'left'}}>
+                <div>
+                    <p style={{color: 'purple'}}>Great choice, heres' what your started set looks like.</p>
+                    <p>Get the perfect introduction of our most popular mask. We will follow that up with our restock box, so you never run out.</p>
+                    <p>
+                        <span style={{color: 'purple'}}>Starter set ships today.</span>
+                        <span style={{float: 'right'}}>$29.99</span>
+                    </p>
+                    <p>Your masks are one time use and we will ship enough to last you a month. No hidden fees and free shipping.</p>
+                    <p style={{color: 'purple'}}>This box ships every month.<br />Shipping is always free. <br />Cancel anytime.</p>
+                </div>
             </div>
         </div>
         
-        {/* CONTAINER 4 */}
+        {/* CONTAINER 5 */}
+
+        <div className="part5">
+            <h1>CREATE YOUR ACCOUNT.</h1>
+            <p>So you can manage you shipments</p>
+            <span>
+                <input type="text" id="firstname" name="firstname" placeholder="First Name" />
+                <input type="text" id="lastname" name="lastname" placeholder="Last Name" />
+            </span>
+            <br></br>
+            <input type="email" id="email" name="email" placeholder="Email" />
+        </div>
 
         </>);
     }
