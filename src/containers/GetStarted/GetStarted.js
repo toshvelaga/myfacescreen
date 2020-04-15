@@ -97,7 +97,7 @@ class GetStarted extends Component {
         
         {/* CONTAINER 5 */}
 
-        <div className="part5">
+        <div style={{marginTop: '40rem'}} className="part5">
             <h1>CREATE YOUR ACCOUNT.</h1>
             <p>So you can manage you shipments</p>
             <span>
@@ -115,10 +115,18 @@ class GetStarted extends Component {
             <p>OR</p>
             <PurpleButton name="Log in with Goggle." color="green" />
             <p>Already a member? Log in.</p>
-            <SquareButton fx={this.showDiv5}/>
+            <SquareButton fx={this.showDiv6}/>
         </div>
 
         {/* CONTAINER 6 */}
+
+        <div style={{display: this.state.part6}} className="part6">
+            <p style={{marginTop: '2rem', color: 'orange'}}>You're logged in. (Log out)</p>
+            <p style={{color: 'orange'}}>iggsloop@gmail.com</p>
+            <p>WHERE SHOULD WE SHIP</p>
+            <PurpleButton color="purple" name="Upload my face" />
+            <span></span>
+        </div>
 
 
         </>);
