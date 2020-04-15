@@ -11,7 +11,8 @@ class GetStarted extends Component {
     state = { 
         part2: 'none',
         part3: 'none',
-        part4: 'none'
+        part4: 'none',
+        part5: 'none'
     }
 
     showDiv2 = () => {
@@ -24,6 +25,10 @@ class GetStarted extends Component {
 
     showDiv4 = () => {
         this.setState({part4: 'contents'})
+    }
+
+    showDiv5 = () => {
+        this.setState({part5: 'contents'})
     }
     
     render() { 
@@ -100,8 +105,21 @@ class GetStarted extends Component {
                 <input type="text" id="lastname" name="lastname" placeholder="Last Name" />
             </span>
             <br></br>
+            <br></br>
             <input type="email" id="email" name="email" placeholder="Email" />
+            <br></br>
+            <br></br>
+            <input type="password" id="password" name="password" placeholder="Password" />
+            <p style={{color: 'orange'}}>By creating an account you agree to our Terms.</p>
+            <PurpleButton name="Continue" color="purple" />
+            <p>OR</p>
+            <PurpleButton name="Log in with Goggle." color="green" />
+            <p>Already a member? Log in.</p>
+            <SquareButton fx={this.showDiv5}/>
         </div>
+
+        {/* CONTAINER 6 */}
+
 
         </>);
     }
