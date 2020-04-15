@@ -1,0 +1,14 @@
+.SquareButton {
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: none;
+    padding: 1rem 1.5rem;
+    /* border-radius: 50px; */
+}
+
+.SquareButton:hover {
+    background-color: indigo;
+}

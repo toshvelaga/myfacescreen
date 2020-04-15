@@ -2,9 +2,9 @@ import React from 'react';
 import './PurpleButton.css'
 
 const PurpleButton = (props) => {
-    return (
-        <button onClick={props.fx} className="PurpleButton">V</button>
-    );
+    return (<>
+        <button className="PurpleButton" style={{backgroundColor: props.color}}>{props.name}</button>
+    </>);
 }
  
 export default PurpleButton;

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import HeaderTitle from '../../components/HeaderTitle/HeaderTitle';
 import QuizHeader from '../../components/QuizHeader/QuizHeader';
 import facemask_BLACK from '../../assets/facemask_BLACK.png'
+import SquareButton from '../../components/Buttons/SquareButton/SquareButton';
 import PurpleButton from '../../components/Buttons/PurpleButton/PurpleButton';
 
 import './GetStarted.css'
@@ -15,6 +16,10 @@ class GetStarted extends Component {
     showDiv2 = () => {
         this.setState({part2: 'contents'})
     }
+
+    showDiv3 = () => {
+        this.setState({part3: 'contents'})
+    }
     
     render() { 
         return (<>
@@ -24,7 +29,7 @@ class GetStarted extends Component {
             <p>Do you have a selfie ready?<br />This will help us get the right face measurement for your mask?</p>
             <img src={facemask_BLACK} style={{width: '20rem', height: '22rem'}} />
             <p>Let's get started.</p>
-            <PurpleButton fx={this.showDiv2} />
+            <SquareButton fx={this.showDiv2} />
         </div>
 
         <div style={{display: this.state.part2}} className="part2">
@@ -33,17 +38,16 @@ class GetStarted extends Component {
             <div className="part2card">Upload my own design.</div>
             <div className="part2card">Pick from Trending.</div>
             <div>
-                <PurpleButton fx={() => alert('logic for div2')} />
+                <SquareButton fx={this.showDiv3} />
             </div>
         </div>
 
         <div style={{display: this.state.part3}} className="part3">
             <p>Let's create your face screen</p>
-            <div className="part2card">Use my face.</div>
-            <div className="part2card">Upload my own design.</div>
-            <div className="part2card">Pick from Trending.</div>
+            <PurpleButton color="purple" name="Upload my face" />
+
             <div>
-                <PurpleButton fx={() => alert('logic for div2')} />
+                <SquareButton fx={() => alert('logic for div2')} />
             </div>
         </div>
         

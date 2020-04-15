@@ -5,7 +5,7 @@ import Navbar from '../../components/Navbar/Navbar'
 import HeroImageHome from '../../components/HeroImageHome/HeroImageHome';
 import HomeDividerTwo from '../../components/HomeDividerTwo/HomeDividerTwo';
 import OrangeButton from '../../components/Buttons/OrangeButton/OrangeButton'
-import GreyBtn from '../../components/Buttons/GreyBtn/GreyBtn';
+import GreyBtn from '../../components/Buttons/GreyButton/GreyButton';
 import Footer from '../../components/Footer/Footer';
 
 class Home extends Component {
