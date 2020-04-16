@@ -6,6 +6,7 @@ import SquareButton from '../../components/Buttons/SquareButton/SquareButton';
 import PurpleButton from '../../components/Buttons/PurpleButton/PurpleButton';
 import Igor_face from '../../assets/Igor_face.png'
 import './GetStarted.css'
+import SignUp from '../SignUp/SignUp';
 
 class GetStarted extends Component {
     state = { 
@@ -141,22 +142,7 @@ class GetStarted extends Component {
             <h5>CREATE YOUR ACCOUNT.</h5>
             <h6>So you can manage you shipments</h6>
 
-            <form style={{width: '60%', display: 'inline-block'}}>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                    <input type="text" class="form-control" id="inputEmail4" placeholder="First Name" />
-                    </div>
-                    <div class="form-group col-md-6">
-                    <input type="text" class="form-control" id="inputPassword4" placeholder="Last Name" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" id="inputAddress" placeholder="Email" />
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" id="inputAddress2" placeholder="Password" />
-                </div>
-            </form>
+            <SignUp />
 
             <p style={{color: '#e58439'}}>By creating an account you agree to our Terms.</p>
             <PurpleButton name="Continue" />

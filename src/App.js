@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Home from './containers/Home/Home'
 import GetStarted from './containers/GetStarted/GetStarted';
+import Login from './containers/Login/Login'
 
 import {
   BrowserRouter as Router,
@@ -19,6 +20,12 @@ function App() {
         </Route>
         <Route path="/get-started">
           <GetStarted />
+        </Route>
+        <Route path="/join">
+          <GetStarted />
+        </Route>
+        <Route path="/login">
+          <Login />
         </Route>
       </Router>
     </div>
