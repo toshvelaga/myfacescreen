@@ -10,7 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import { Link } from "react-router-dom";
 // import Header from '../../components/Header/Header';
 
-// import './SignIn.css'
+import './Login.css'
 
 class Login extends Component {
   state = {
@@ -39,9 +39,9 @@ class Login extends Component {
         <form onSubmit={this.handleSubmit} className="white">
 
           <div style={{display: 'inline-block', marginTop: '2rem'}}>
-          <Avatar style={{backgroundColor: '#dd004f', fontSize: '2rem'}}>
-            {/* <LockOutlinedIcon /> */}
-          </Avatar>
+          {/* <Avatar style={{backgroundColor: '#dd004f', fontSize: '2rem'}}>
+            <LockOutlinedIcon />
+          </Avatar> */}
           </div>
         
           <Typography component="h1" variant="h5">
