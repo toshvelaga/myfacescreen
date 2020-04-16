@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Hamburger.css'
+import classes from './Hamburger.module.css'
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'
 
@@ -8,15 +8,15 @@ import { connect } from 'react-redux'
 const Hamburger = (props) => {
 
     return (<>
-    <div id="mySidenav" style={{width: props.width}} className="sidenav">
-        <a className="closebtn" onClick={props.closeNav}>&times;</a>
+    <div id="mySidenav" style={{width: props.width}} className={classes.sidenav}>
+        <a className={classes.closebtn} onClick={props.closeNav}>&times;</a>
         <Link to="/home">HOME</Link>
         <Link to="/get-started">GET STARTED</Link>
         <Link to="products">OUR PRODUCTS</Link>
         <Link to="/gift">GIFT THE MASK</Link>
     </div>
 
-    <div id="nav-icon1" onClick={props.openNav}>
+    <div id={classes.navicon1} onClick={props.openNav}>
         <span></span>
         <span></span>
         <span></span>
