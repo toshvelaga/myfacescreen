@@ -73,12 +73,13 @@ class GetStarted extends Component {
         {/* CONTAINER 3 */}
 
         <div style={{display: this.state.part3}} className="part3">
-            <p style={{marginTop: '2rem'}}>Let's create your face screen</p>
-            <PurpleButton color="purple" name="Upload my face" />
+            <p style={{marginTop: '20rem'}}>Let's create your face screen</p>
+            <PurpleButton name="Upload my face" />
+            <p>Don't like your selfie?<br />Try again.</p>
             <div>
-                <img src={Igor_face} />
+                {/* <img src={Igor_face} /> */}
             </div>
-                <PurpleButton color="purple" name="Click to add another member" />
+                <PurpleButton name="Click to add another member" />
             <div style={{marginTop: '2rem'}}>
                 <SquareButton fx={this.showDiv4} />
             </div>

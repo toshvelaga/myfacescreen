@@ -1,3 +1,13 @@
 .PurpleButton {
     color: white;
+    background-color: #6658f5;
+    border-radius: 5px;
+    /* font-weight: bold; */
+    text-decoration: none;
+    outline: none;
+    padding: .4rem 1.2rem;
+}
+
+.PurpleButton:hover {
+    background-color: #5c4ef2;
 }
