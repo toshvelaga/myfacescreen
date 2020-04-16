@@ -1,4 +1,4 @@
-.OrangeBtn {
+.OrangeButton {
     background-color: #ff6002;
     color: white;
     font-weight: bold;
@@ -10,6 +10,6 @@
     border-radius: 50px;
 }
 
-.OrangeBtn:hover {
+.OrangeButton:hover {
     background-color: #fc7121;
 }

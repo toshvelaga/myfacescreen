@@ -1,9 +1,9 @@
 import React from 'react';
-import './GreyBtn.css'
+import './GreyButton.css'
 
 const GreyBtn = (props) => {
     return (<>
-        <button className="GreyBtn">{props.text}</button>
+        <button className="GreyButton">{props.text}</button>
     </>);
 }
  
