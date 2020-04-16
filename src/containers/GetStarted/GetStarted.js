@@ -120,12 +120,34 @@ class GetStarted extends Component {
 
         {/* CONTAINER 6 */}
 
-        <div style={{display: this.state.part6}} className="part6">
+        <div style={{display: this.state.part6, marginTop: '5rem'}} className="part6">
             <p style={{marginTop: '2rem', color: 'orange'}}>You're logged in. (Log out)</p>
             <p style={{color: 'orange'}}>iggsloop@gmail.com</p>
             <p>WHERE SHOULD WE SHIP</p>
-            <PurpleButton color="purple" name="Upload my face" />
-            <span></span>
+            <span>
+                <input type="text" placeholder="Igor" />
+                <input type="text" placeholder="Feerer" />
+            </span>
+            <br></br>
+            <input type="text" placeholder="Address Line 1" />
+            <br></br>
+            <input type="text" placeholder="Address Line 2" />
+            <br></br>
+            <span>
+            <input type="text" placeholder="Zip Code" />
+            <select id="states">
+                <option value="CA">CA</option>
+                <option value="KY">KY</option>
+                <option value="TN">TN</option>
+            </select>
+            <br></br>
+            <input type="text" placeholder="City" />
+            <div>
+                <input type="checkbox" id="billing_address" name="billing_address" />
+                <label for="scales">Billing address same as shipping address</label>
+            </div>
+
+            </span>
         </div>
 
 
