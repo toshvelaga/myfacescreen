@@ -13,6 +13,7 @@ class GetStarted extends Component {
         part3: 'none',
         part4: 'none',
         part5: 'none',
+        part6: 'none',
         active1: false,
         active2: false,
         image: null
@@ -54,6 +55,10 @@ class GetStarted extends Component {
 
     showDiv5 = () => {
         this.setState({part5: 'contents'})
+    }
+
+    showDiv6 = () => {
+        this.setState({part6: 'contents'})
     }
     
     render() { 
@@ -132,23 +137,32 @@ class GetStarted extends Component {
         
         {/* CONTAINER 5 */}
 
-        <div style={{marginTop: '40rem'}} className="part5">
-            <h1>CREATE YOUR ACCOUNT.</h1>
-            <p>So you can manage you shipments</p>
-            <span>
-                <input type="text" id="firstname" name="firstname" placeholder="First Name" />
-                <input type="text" id="lastname" name="lastname" placeholder="Last Name" />
-            </span>
+        <div style={{marginTop: '10rem'}} className="part5">
+            <h5>CREATE YOUR ACCOUNT.</h5>
+            <h6>So you can manage you shipments</h6>
+
+            <form style={{width: '60%', display: 'inline-block'}}>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                    <input type="text" class="form-control" id="inputEmail4" placeholder="First Name" />
+                    </div>
+                    <div class="form-group col-md-6">
+                    <input type="text" class="form-control" id="inputPassword4" placeholder="Last Name" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="inputAddress" placeholder="Email" />
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="inputAddress2" placeholder="Password" />
+                </div>
+            </form>
+
+            <p style={{color: '#e58439'}}>By creating an account you agree to our Terms.</p>
+            <PurpleButton name="Continue" />
             <br></br>
-            <br></br>
-            <input type="email" id="email" name="email" placeholder="Email" />
-            <br></br>
-            <br></br>
-            <input type="password" id="password" name="password" placeholder="Password" />
-            <p style={{color: 'orange'}}>By creating an account you agree to our Terms.</p>
-            <PurpleButton name="Continue" color="purple" />
             <p>OR</p>
-            <PurpleButton name="Log in with Goggle." color="green" />
+            <PurpleButton name="Log in with Goggle." color="#1aae9e" />
             <p>Already a member? Log in.</p>
             <SquareButton fx={this.showDiv6}/>
         </div>
@@ -156,36 +170,53 @@ class GetStarted extends Component {
         {/* CONTAINER 6 */}
 
         <div style={{display: this.state.part6, marginTop: '5rem'}} className="part6">
-            <p style={{marginTop: '2rem', color: 'orange'}}>You're logged in. (Log out)</p>
-            <p style={{color: 'orange'}}>iggsloop@gmail.com</p>
-            <p>WHERE SHOULD WE SHIP</p>
-            <span>
-                <input type="text" placeholder="Igor" />
-                <input type="text" placeholder="Feerer" />
-            </span>
-            <br></br>
-            <input type="text" placeholder="Address Line 1" />
-            <br></br>
-            <input type="text" placeholder="Address Line 2" />
-            <br></br>
-            <span>
-                <input type="text" placeholder="Zip Code" />
-                <select id="states">
-                    <option value="CA">CA</option>
-                    <option value="KY">KY</option>
-                    <option value="TN">TN</option>
-                </select>
-            </span>
-            <br></br>
-            <input type="text" placeholder="City" />
+            <p style={{marginTop: '2rem', color: '#e58439'}}>You're logged in. (Log out)</p>
+            <p style={{color: '#e58439'}}>iggsloop@gmail.com<br></br>WHERE SHOULD WE SHIP</p>
+
+            <form style={{width: '60%', display: 'inline-block'}}>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email" />
+                    </div>
+                    <div class="form-group col-md-6">
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="inputAddress" placeholder="Address Line 1" />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Address Line 2 (Optional)" />
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                    <input type="text" class="form-control" id="inputCity" placeholder="City"/>
+                    </div>
+                    <div class="form-group col-md-4">
+                    <select id="inputState" class="form-control">
+                        <option selected>Select State</option>
+                        <option>...</option>
+                    </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                    <input type="text" class="form-control" id="inputZip" placeholder="Zip" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck" />
+                    <label class="form-check-label" for="gridCheck">
+                        Billing address same as shipping address
+                    </label>
+                    </div>
+                </div>
+            </form>
+
+
             <div>
-                <input type="checkbox" id="billing_address" name="billing_address" />
-                <label for="scales">Billing address same as shipping address</label>
+                <PurpleButton name="Continue" />
             </div>
-            <div>
-                <PurpleButton color="purple" name="Continue" />
-            </div>
-            <div style={{border: '1px solid gray', width: '50%', display: 'inline-block'}}>
+            <div style={{marginTop: '1rem', border: '1px solid gray', width: '50%', display: 'inline-block', padding: '1rem'}}>
                 <p>Thanks for your interest in our product.<br></br>
                 We will notify you when we are ready to process your order and ship your package.
                 </p>
