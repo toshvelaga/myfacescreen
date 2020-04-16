@@ -25,7 +25,6 @@ const Hamburger = (props) => {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state.navbarReducer.width)
     return {
         width: state.navbarReducer.width
     }

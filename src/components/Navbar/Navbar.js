@@ -3,13 +3,14 @@ import './Navbar.css'
 import medicalmask from '../../assets/medical-mask.svg'
 import Hamburger from '../Hamburger/Hamburger'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 
-const Navbar = () => {
+const Navbar = (props) => {
     return (<>
 
     <div className="mainNavbar">
         <div><Hamburger /></div>
-        <span onClick={()=> alert('hi')}>MENU</span>
+        <span onClick={props.openNav}>MENU</span>
         <Link to="get-started"><span>GET STARTED</span></Link>
         <span>PRODUCTS</span>
         {/* <span>GIFT</span> */}
@@ -23,5 +24,12 @@ const Navbar = () => {
     </div>
     </>);
 }
+
+const mapDispatchToProps = dispatch => {
+    return {
+      // dispatching plain actions
+      openNav: () => dispatch({type: 'OPEN_NAVBAR' }),
+    }
+}
  
-export default Navbar;
+export default connect(null, mapDispatchToProps)(Navbar);
