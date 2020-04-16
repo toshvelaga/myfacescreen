@@ -21,7 +21,7 @@ function App() {
         <Route path="/get-started">
           <GetStarted />
         </Route>
-        <Route path="/how-it-works">
+        <Route path="/join">
           <GetStarted />
         </Route>
         <Route path="/login">
