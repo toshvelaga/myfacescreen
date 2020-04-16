@@ -39,9 +39,9 @@ class GetStarted extends Component {
         {/* CONTAINER 1 */}
 
         <div className="part1">
-            <p>Do you have a selfie ready?<br />This will help us get the right face measurement for your mask?</p>
+            <p>Do you have a selfie ready?<br />This will help us get the right face measurement for your mask.</p>
             <img src={facemask_BLACK} style={{width: '20rem', height: '22rem'}} />
-            <p>Let's get started.</p>
+            <p style={{marginTop: '1rem', marginBottom: '1rem'}}>Let's get started.</p>
             <SquareButton fx={this.showDiv2} />
         </div>
 
