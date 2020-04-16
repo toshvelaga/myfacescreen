@@ -85,9 +85,11 @@ class GetStarted extends Component {
 
         <div style={{display: this.state.part3}} className="part3">
             <p style={{marginTop: '20rem'}}>Let's create your face screen</p>
-            <PurpleButton name="Upload my face" />
+            
 
-            <input type="file" accept="image/gif, image/jpeg, image/png" onChange={this.onImageChange} className="filetype" id="group_image"/>
+            <label for="group_image">Browse...</label>
+            <input style={{display: 'none'}} type="file" accept="image/gif, image/jpeg, image/png" onChange={this.onImageChange} className="filetype" id="group_image"/>
+
             <div>
                 <img id="target" style={{width: 'auto', height: '250px'}} src={this.state.image}/>
             </div>
@@ -105,24 +107,26 @@ class GetStarted extends Component {
         {/* CONTAINER 4 */}
 
         <div style={{display: this.state.part4}} className="part4">
-            <div style={{float: 'left'}}>
+            <div style={{marginTop: '10rem', display: 'inline-block'}}>
+            <div style={{float: 'left', marginLeft: '5rem'}}>
                 <div>
                     <img src={facemask_BLACK} style={{width: '20rem', height: '22rem'}} />
                 </div>
-                <PurpleButton color="purple" name="GET THE STARTER PACK" />
+                <PurpleButton name="GET THE STARTER PACK" />
             </div>
 
-            <div style={{float: 'right', width: '33%', textAlign: 'left'}}>
+            <div style={{float: 'right', width: '33%', textAlign: 'left', marginRight: '3rem'}}>
                 <div>
-                    <p style={{color: 'purple'}}>Great choice, heres' what your started set looks like.</p>
+                    <h6 style={{color: '#6658f5'}}>Great choice, here's what your started set looks like.</h6>
                     <p>Get the perfect introduction of our most popular mask. We will follow that up with our restock box, so you never run out.</p>
                     <p>
-                        <span style={{color: 'purple'}}>Starter set ships today.</span>
+                        <span style={{color: '#6658f5'}}><h6>Starter set ships today.</h6></span>
                         <span style={{float: 'right'}}>$29.99</span>
                     </p>
                     <p>Your masks are one time use and we will ship enough to last you a month. No hidden fees and free shipping.</p>
-                    <p style={{color: 'purple'}}>This box ships every month.<br />Shipping is always free. <br />Cancel anytime.</p>
+                    <h6 style={{color: '#6658f5'}}>This box ships every month.<br />Shipping is always free. <br />Cancel anytime.</h6>
                 </div>
+            </div>
             </div>
         </div>
         
