@@ -16,9 +16,9 @@ const Navbar = () => {
         
         <span><img src={medicalmask} style={{width: '4rem', height: '4rem'}}/></span>
         
-        <span>HOW IT WORKS</span>
-        <span>LOGIN</span>
-        <span>JOIN</span>
+        <Link to="how-it-works"><span>HOW IT WORKS</span></Link>
+        <Link to="login"><span>LOGIN</span></Link>
+        <Link to="join"><span>JOIN</span></Link>
         <span>BOX</span>
     </div>
     </>);
