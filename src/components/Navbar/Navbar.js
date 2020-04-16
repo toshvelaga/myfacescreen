@@ -12,7 +12,7 @@ const Navbar = () => {
         <span>MENU</span>
         <Link to="get-started"><span>GET STARTED</span></Link>
         <span>PRODUCTS</span>
-        <span>GIFT</span>
+        {/* <span>GIFT</span> */}
         
         <span><img src={medicalmask} style={{width: '4rem', height: '4rem'}}/></span>
         

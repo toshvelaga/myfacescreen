@@ -15,7 +15,18 @@ class GetStarted extends Component {
         part5: 'none',
         active1: false,
         active2: false,
+        image: null
     }
+
+    onImageChange = (event) => {
+        if (event.target.files && event.target.files[0]) {
+          let reader = new FileReader();
+          reader.onload = (e) => {
+            this.setState({image: e.target.result});
+          };
+          reader.readAsDataURL(event.target.files[0]);
+        }
+      }
 
     toggleClass1 = () => {
         const currentState = this.state.active1;
@@ -75,6 +86,12 @@ class GetStarted extends Component {
         <div style={{display: this.state.part3}} className="part3">
             <p style={{marginTop: '20rem'}}>Let's create your face screen</p>
             <PurpleButton name="Upload my face" />
+
+            <input type="file" accept="image/gif, image/jpeg, image/png" onChange={this.onImageChange} className="filetype" id="group_image"/>
+            <div>
+                <img id="target" src={this.state.image}/>
+            </div>
+            
             <p>Don't like your selfie?<br />Try again.</p>
             <div>
                 {/* <img src={Igor_face} /> */}
