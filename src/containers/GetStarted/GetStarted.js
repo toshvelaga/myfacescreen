@@ -89,7 +89,7 @@ class GetStarted extends Component {
 
             <input type="file" accept="image/gif, image/jpeg, image/png" onChange={this.onImageChange} className="filetype" id="group_image"/>
             <div>
-                <img id="target" src={this.state.image}/>
+                <img id="target" style={{width: 'auto', height: '250px'}} src={this.state.image}/>
             </div>
             
             <p>Don't like your selfie?<br />Try again.</p>
