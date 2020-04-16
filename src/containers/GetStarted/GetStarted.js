@@ -134,20 +134,29 @@ class GetStarted extends Component {
             <input type="text" placeholder="Address Line 2" />
             <br></br>
             <span>
-            <input type="text" placeholder="Zip Code" />
-            <select id="states">
-                <option value="CA">CA</option>
-                <option value="KY">KY</option>
-                <option value="TN">TN</option>
-            </select>
+                <input type="text" placeholder="Zip Code" />
+                <select id="states">
+                    <option value="CA">CA</option>
+                    <option value="KY">KY</option>
+                    <option value="TN">TN</option>
+                </select>
+            </span>
             <br></br>
             <input type="text" placeholder="City" />
             <div>
                 <input type="checkbox" id="billing_address" name="billing_address" />
                 <label for="scales">Billing address same as shipping address</label>
             </div>
+            <div>
+                <PurpleButton color="purple" name="Continue" />
+            </div>
+            <div style={{border: '1px solid gray', width: '50%', display: 'inline-block'}}>
+                <p>Thanks for your interest in our product.<br></br>
+                We will notify you when we are ready to process your order and ship your package.
+                </p>
+            </div>
 
-            </span>
+            
         </div>
 
 
