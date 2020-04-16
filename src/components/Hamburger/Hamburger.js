@@ -8,8 +8,8 @@ import { connect } from 'react-redux'
 const Hamburger = (props) => {
 
     return (<>
-    <div id="mySidenav" style={{width: props.width}} class="sidenav">
-        <a class="closebtn" onClick={props.closeNav}>&times;</a>
+    <div id="mySidenav" style={{width: props.width}} className="sidenav">
+        <a className="closebtn" onClick={props.closeNav}>&times;</a>
         <Link to="/home">HOME</Link>
         <Link to="/get-started">GET STARTED</Link>
         <Link to="products">OUR PRODUCTS</Link>
