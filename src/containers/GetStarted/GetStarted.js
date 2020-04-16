@@ -12,8 +12,22 @@ class GetStarted extends Component {
         part2: 'none',
         part3: 'none',
         part4: 'none',
-        part5: 'none'
+        part5: 'none',
+        active1: false,
+        active2: false,
     }
+
+    toggleClass1 = () => {
+        const currentState = this.state.active1;
+        this.setState({ active1: !currentState });
+        this.setState({active2: false})
+    };
+
+    toggleClass2 = () => {
+        const currentState = this.state.active2;
+        this.setState({ active2: !currentState });
+        this.setState({active1: false})
+    };
 
     showDiv2 = () => {
         this.setState({part2: 'contents'})
@@ -49,9 +63,8 @@ class GetStarted extends Component {
 
         <div style={{display: this.state.part2}} className="part2">
             <p>Choose your image.</p>
-            <div className="part2card">Use my face.</div>
-            <div className="part2card">Upload my own design.</div>
-            <div className="part2card">Pick from Trending.</div>
+            <div onClick={this.toggleClass1} className={!this.state.active1 ? "part2card" : "part2card-selected"}><p>Use my face.</p></div>
+            <div onClick={this.toggleClass2} className={!this.state.active2 ? "part2card" : "part2card-selected"}><p>Upload my own design.</p></div>
             <div>
                 <SquareButton fx={this.showDiv3} />
             </div>
