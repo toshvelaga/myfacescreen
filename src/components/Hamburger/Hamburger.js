@@ -1,41 +1,45 @@
 import React, { Component } from 'react';
 import './Hamburger.css'
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux'
 
 // codepen: https://codepen.io/designcouch/pen/Atyop
 
-class Hamburger extends Component {
-    state = { 
-        width: '0'
-    }
-    
-    openNav = () => {
-        this.setState({width: '335px'})
-    }
+const Hamburger = (props) => {
 
-    closeNav = () => {
-        this.setState({width: '0px'})
-    }
+    return (<>
+    <div id="mySidenav" style={{width: props.width}} class="sidenav">
+        <a class="closebtn" onClick={props.closeNav}>&times;</a>
+        <Link to="/home">HOME</Link>
+        <Link to="/get-started">GET STARTED</Link>
+        <Link to="products">OUR PRODUCTS</Link>
+        <Link to="/gift">GIFT THE MASK</Link>
+    </div>
 
-    render() { 
-        return (<>      
-            <div id="mySidenav" style={{width: this.state.width}} class="sidenav">
-                <a class="closebtn" onClick={this.closeNav}>&times;</a>
-                <Link to="/home">HOME</Link>
-                <Link to="/get-started">GET STARTED</Link>
-                <Link to="products">OUR PRODUCTS</Link>
-                <Link to="/gift">GIFT THE MASK</Link>
-            </div>
-
-            <div id="nav-icon1" onClick={this.openNav}>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+    <div id="nav-icon1" onClick={props.openNav}>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
     </>);
+}
+
+const mapStateToProps = (state) => {
+    console.log(state.navbarReducer.width)
+    return {
+        width: state.navbarReducer.width
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+      // dispatching plain actions
+      openNav: () => dispatch({type: 'OPEN_NAVBAR' }),
+      closeNav: () => dispatch({type: 'CLOSE_NAVBAR'})
     }
 }
  
-export default Hamburger;
+export default connect(mapStateToProps, mapDispatchToProps)(Hamburger);
+
 
 

@@ -9,7 +9,7 @@ const Navbar = () => {
 
     <div className="mainNavbar">
         <div><Hamburger /></div>
-        <span>MENU</span>
+        <span onClick={()=> alert('hi')}>MENU</span>
         <Link to="get-started"><span>GET STARTED</span></Link>
         <span>PRODUCTS</span>
         {/* <span>GIFT</span> */}
