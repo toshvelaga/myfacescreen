@@ -3,6 +3,7 @@ import PurpleButton from '../../Buttons/PurpleButton/PurpleButton'
 import SquareButton from '../../Buttons/SquareButton/SquareButton'
 import { connect } from 'react-redux'
 import './Fold_3.css'
+import Cropper from '../../Cropper/Cropper';
 
 const Fold_3 = (props) => {
 
@@ -19,10 +20,9 @@ const Fold_3 = (props) => {
     return (<>        
     <div style={{display: props.display}} className="part3">
         <p style={{marginTop: '10rem'}}>Let's create your face screen</p>
-        
+        <Cropper />
         <label for="group_image">Browse...</label>
         <input style={{display: 'none'}} type="file" accept="image/gif, image/jpeg, image/png" onChange={onImageChange} className="filetype" id="group_image"/>
-
         <div>
             {/* <img id="target" style={{width: 'auto', height: '250px'}} src={this.state.image}/> */}
         </div>
