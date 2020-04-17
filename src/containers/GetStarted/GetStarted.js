@@ -7,6 +7,7 @@ import PurpleButton from '../../components/Buttons/PurpleButton/PurpleButton';
 import Igor_face from '../../assets/Igor_face.png'
 import './GetStarted.css'
 import SignUp from '../SignUp/SignUp';
+import Fold_1 from './Fold_1/Fold_1';
 
 class GetStarted extends Component {
     state = { 
@@ -68,13 +69,7 @@ class GetStarted extends Component {
         <QuizHeader />
 
         {/* CONTAINER 1 */}
-
-        <div className="part1">
-            <p>Do you have a selfie ready?<br />This will help us get the right face measurement for your mask.</p>
-            <img src={facemask_BLACK} style={{width: '20rem', height: '22rem'}} />
-            <p style={{marginTop: '1rem', marginBottom: '1rem'}}>Let's get started.</p>
-            <SquareButton fx={this.showDiv2} />
-        </div>
+        <Fold_1 />
 
         {/* CONTAINER 2 */}
 
