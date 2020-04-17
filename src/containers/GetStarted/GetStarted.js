@@ -9,13 +9,13 @@ import './GetStarted.css'
 import SignUp from '../SignUp/SignUp';
 import Fold_1 from '../../components/GetStartedFolds/Fold_1/Fold_1';
 import Fold_2 from '../../components/GetStartedFolds/Fold_2/Fold_2';
+import Fold_3 from '../../components/GetStartedFolds/Fold_3/Fold_3';
 
 class GetStarted extends Component {
     state = { 
         part4: 'none',
         part5: 'none',
         part6: 'none',
-
         image: null
     }
 
@@ -29,25 +29,6 @@ class GetStarted extends Component {
         }
       }
 
-    toggleClass1 = () => {
-        const currentState = this.state.active1;
-        this.setState({ active1: !currentState });
-        this.setState({active2: false})
-    };
-
-    toggleClass2 = () => {
-        const currentState = this.state.active2;
-        this.setState({ active2: !currentState });
-        this.setState({active1: false})
-    };
-
-    showDiv2 = () => {
-        this.setState({part2: 'contents'})
-    }
-
-    showDiv3 = () => {
-        this.setState({part3: 'contents'})
-    }
 
     showDiv4 = () => {
         this.setState({part4: 'contents'})
@@ -75,26 +56,7 @@ class GetStarted extends Component {
 
         {/* CONTAINER 3 */}
 
-        <div style={{display: this.state.part3}} className="part3">
-            <p style={{marginTop: '20rem'}}>Let's create your face screen</p>
-            
-
-            <label for="group_image">Browse...</label>
-            <input style={{display: 'none'}} type="file" accept="image/gif, image/jpeg, image/png" onChange={this.onImageChange} className="filetype" id="group_image"/>
-
-            <div>
-                <img id="target" style={{width: 'auto', height: '250px'}} src={this.state.image}/>
-            </div>
-            
-            <p>Don't like your selfie?<br />Try again.</p>
-            <div>
-                {/* <img src={Igor_face} /> */}
-            </div>
-                <PurpleButton name="Click to add another member" />
-            <div style={{marginTop: '2rem'}}>
-                <SquareButton fx={this.showDiv4} />
-            </div>
-        </div>
+        <Fold_3 />
 
         {/* CONTAINER 4 */}
 
