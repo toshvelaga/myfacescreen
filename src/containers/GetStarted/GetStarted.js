@@ -7,17 +7,15 @@ import PurpleButton from '../../components/Buttons/PurpleButton/PurpleButton';
 import Igor_face from '../../assets/Igor_face.png'
 import './GetStarted.css'
 import SignUp from '../SignUp/SignUp';
-import Fold_1 from './Fold_1/Fold_1';
+import Fold_1 from '../../components/GetStartedFolds/Fold_1/Fold_1';
+import Fold_2 from '../../components/GetStartedFolds/Fold_2/Fold_2';
 
 class GetStarted extends Component {
     state = { 
-        part2: 'none',
-        part3: 'none',
         part4: 'none',
         part5: 'none',
         part6: 'none',
-        active1: false,
-        active2: false,
+
         image: null
     }
 
@@ -73,14 +71,7 @@ class GetStarted extends Component {
 
         {/* CONTAINER 2 */}
 
-        <div style={{display: this.state.part2}} className="part2">
-            <p>Choose your image.</p>
-            <div onClick={this.toggleClass1} className={!this.state.active1 ? "part2card" : "part2card-selected"}><p>Use my face.</p></div>
-            <div onClick={this.toggleClass2} className={!this.state.active2 ? "part2card" : "part2card-selected"}><p>Upload my own design.</p></div>
-            <div>
-                <SquareButton fx={this.showDiv3} />
-            </div>
-        </div>
+        <Fold_2 />
 
         {/* CONTAINER 3 */}
 
