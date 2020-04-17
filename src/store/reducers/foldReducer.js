@@ -1,9 +1,10 @@
-import { SHOW_FOLD_2, SHOW_FOLD_3, SHOW_FOLD_4 } from '../constants/action-types'
+import { SHOW_FOLD_2, SHOW_FOLD_3, SHOW_FOLD_4, SHOW_FOLD_5 } from '../constants/action-types'
 
 const initialState = {
     Fold_2: 'none',
     Fold_3: 'none',
-    Fold_4: 'none'
+    Fold_4: 'none',
+    Fold_5: 'none'
 }
 
 const foldReducer = (state = initialState, action) => {
@@ -25,6 +26,14 @@ const foldReducer = (state = initialState, action) => {
               Fold_2: 'contents',
               Fold_3: 'contents',
               Fold_4: 'contents'
+            };
+        case SHOW_FOLD_5:
+          return {
+              ...initialState,
+              Fold_2: 'contents',
+              Fold_3: 'contents',
+              Fold_4: 'contents',
+              Fold_5: 'contents'
             };
         default:
           return state;

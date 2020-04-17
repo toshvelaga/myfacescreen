@@ -10,6 +10,7 @@ import SignUp from '../SignUp/SignUp';
 import Fold_1 from '../../components/GetStartedFolds/Fold_1/Fold_1';
 import Fold_2 from '../../components/GetStartedFolds/Fold_2/Fold_2';
 import Fold_3 from '../../components/GetStartedFolds/Fold_3/Fold_3';
+import Fold_4 from '../../components/GetStartedFolds/Fold_4/Fold_4';
 
 class GetStarted extends Component {
     state = { 
@@ -19,48 +20,27 @@ class GetStarted extends Component {
         image: null
     }
 
-    onImageChange = (event) => {
-        if (event.target.files && event.target.files[0]) {
-          let reader = new FileReader();
-          reader.onload = (e) => {
-            this.setState({image: e.target.result});
-          };
-          reader.readAsDataURL(event.target.files[0]);
-        }
-      }
-
-
-    showDiv4 = () => {
-        this.setState({part4: 'contents'})
-    }
-
-    showDiv5 = () => {
-        this.setState({part5: 'contents'})
-    }
-
-    showDiv6 = () => {
-        this.setState({part6: 'contents'})
-    }
-    
     render() { 
         return (<>
         <HeaderTitle />
         <QuizHeader />
 
-        {/* CONTAINER 1 */}
+        {/* FOLD 1 */}
         <Fold_1 />
 
-        {/* CONTAINER 2 */}
+        {/* FOLD 2 */}
 
         <Fold_2 />
 
-        {/* CONTAINER 3 */}
+        {/* FOLD 3 */}
 
         <Fold_3 />
 
-        {/* CONTAINER 4 */}
+        {/* FOLD 4 */}
 
-        <div style={{display: this.state.part4}} className="part4">
+        <Fold_4 />
+
+        {/* <div style={{display: this.state.part4}} className="part4">
             <div style={{marginTop: '10rem', display: 'inline-block'}}>
             <div style={{float: 'left', marginLeft: '5rem'}}>
                 <div>
@@ -82,7 +62,7 @@ class GetStarted extends Component {
                 </div>
             </div>
             </div>
-        </div>
+        </div> */}
         
         {/* CONTAINER 5 */}
 
