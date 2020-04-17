@@ -1,6 +1,6 @@
 import React from 'react';
 import facemask_BLACK from '../../../assets/facemask_BLACK.png'
-import SquareButton from '../../../components/Buttons/SquareButton/SquareButton'
+import SquareButton from '../../Buttons/SquareButton/SquareButton'
 import { connect } from 'react-redux'
 
 const Fold_1 = (props) => {
