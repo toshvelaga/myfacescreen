@@ -46,14 +46,16 @@ class SignUp extends Component {
             </Avatar> */}
           </div>
 
-          {/* <Typography style={{marginBottom: '2rem'}} component="h1" variant="h5">
-            Sign Up
-          </Typography> */}
+          <Typography style={{marginBottom: '1rem'}} component="h1" variant="h6">
+            CREATE YOUR ACCOUNT
+          </Typography>
+          <p style={{marginBottom: '2rem'}}>So you can manage your shipments.</p>
 
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
                 onChange={this.handleChange}
+                margin="dense"
                 autoComplete="fname"
                 name="firstName"
                 variant="outlined"
@@ -66,6 +68,7 @@ class SignUp extends Component {
             <Grid item xs={12} sm={6}>
               <TextField
                 onChange={this.handleChange}
+                margin="dense"
                 variant="outlined"
                 required
                 fullWidth
@@ -79,6 +82,7 @@ class SignUp extends Component {
             <Grid item xs={12}>
               <TextField
                 onChange={this.handleChange}
+                margin="dense"
                 variant="outlined"
                 required
                 fullWidth
@@ -91,6 +95,7 @@ class SignUp extends Component {
             <Grid item xs={12}>
               <TextField
                 onChange={this.handleChange}
+                margin="dense"
                 variant="outlined"
                 required
                 fullWidth
@@ -103,24 +108,36 @@ class SignUp extends Component {
             </Grid>
 
           </Grid>
-          <br></br>
+
+          <Grid container justify="flex">
+            <Grid item>
+                <p>By creating an account you agree to our terms</p>
+            </Grid>
+          </Grid>
+
           <Button
-            style={{backgroundColor: '#0378d8'}}
+            style={{backgroundColor: '#6658f5'}}
             type="submit"
             fullWidth
             variant="contained"
             color="primary"
           >
-            Sign Up
+            Continue
           </Button>
-          <Grid container justify="flex">
-            <Grid item>
-              
-              <Link style={{textDecoration: 'none', color: '#0378d8'}} to="/signin">
-                <p>Already have an account? Sign in</p>
-              </Link>
-            </Grid>
-          </Grid>
+
+          <p>OR</p>
+
+          <Button
+            style={{backgroundColor: '#1aae9e'}}
+            type="submit"
+            fullWidth
+            variant="contained"
+            color="primary"
+          >
+            Log in with Google
+          </Button>
+
+          <p>Already a member? Log in.</p>
 
           <div className="error">
             {authError ? <p>{authError}</p> : null}
