@@ -2,6 +2,7 @@ import React from 'react';
 import PurpleButton from '../../Buttons/PurpleButton/PurpleButton'
 import { connect } from 'react-redux'
 import Shipping from '../../../containers/Shipping/Shipping'
+import Select from '../../Select/Select'
 
 const Fold_6 = (props) => {
     return (<>
@@ -9,6 +10,7 @@ const Fold_6 = (props) => {
             <p style={{marginTop: '2rem'}}>You're logged in. (Log out)<br />iggsloop@gmail.com</p>
             <p>WHERE SHOULD WE SHIP</p>
             <Shipping />
+            <Select />
 
             {/* <form style={{width: '60%', display: 'inline-block'}}>
                 <div class="form-row">
