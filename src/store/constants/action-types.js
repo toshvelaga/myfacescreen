@@ -11,3 +11,4 @@ export const SHOW_FOLD_7 = "SHOW_FOLD_7"
 export const USE_FACE = "USE_FACE"
 export const UPLOAD_DESIGN = "UPLOAD_DESIGN"
 
+export const SELECT_STATE = "SELECT_STATE"

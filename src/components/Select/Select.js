@@ -21,6 +21,7 @@ export default function SimpleSelect() {
 
   const handleChange = (event) => {
     setState(event.target.value);
+    console.log(event.target.value)
   };
 
   return(<>
