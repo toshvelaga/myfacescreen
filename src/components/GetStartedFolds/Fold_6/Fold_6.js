@@ -1,14 +1,16 @@
 import React from 'react';
 import PurpleButton from '../../Buttons/PurpleButton/PurpleButton'
 import { connect } from 'react-redux'
+import Shipping from '../../../containers/Shipping/Shipping'
 
 const Fold_6 = (props) => {
     return (<>
-            <div style={{display: props.display, marginTop: '5rem'}} className="part6">
-            <p style={{marginTop: '2rem', color: '#e58439'}}>You're logged in. (Log out)</p>
-            <p style={{color: '#e58439'}}>iggsloop@gmail.com<br></br>WHERE SHOULD WE SHIP</p>
+            <div style={{display: 'contents', marginTop: '5rem'}} className="part6">
+            <p style={{marginTop: '2rem'}}>You're logged in. (Log out)<br />iggsloop@gmail.com</p>
+            <p>WHERE SHOULD WE SHIP</p>
+            <Shipping />
 
-            <form style={{width: '60%', display: 'inline-block'}}>
+            {/* <form style={{width: '60%', display: 'inline-block'}}>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                     <input type="email" class="form-control" id="inputEmail4" placeholder="Email" />
@@ -45,12 +47,8 @@ const Fold_6 = (props) => {
                     </label>
                     </div>
                 </div>
-            </form>
+            </form> */}
 
-
-            <div>
-                <PurpleButton name="Continue" />
-            </div>
             <div style={{marginTop: '1rem', border: '1px solid gray', width: '50%', display: 'inline-block', padding: '1rem'}}>
                 <p>Thanks for your interest in our product.<br></br>
                 We will notify you when we are ready to process your order and ship your package.
