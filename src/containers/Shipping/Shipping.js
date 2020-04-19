@@ -14,6 +14,7 @@ import SimpleSelect from '../../components/Select/Select'
 import firebase from '../../firebase/fbConfig'
 
 import './Shipping.css'
+import store from '../../store/store';
 
 let db = firebase.firestore();
 
@@ -45,11 +46,13 @@ class Shipping extends Component {
       Address_Line_1: this.state.AddressLine1,
       Address_Line_2: this.state.AddressLine2,
       Zip_Code: this.state.ZipCode,
-      City: this.state.City
+      City: this.state.City,
+      State: store.getState().selectedReducer.selected_state
     })
   }
 
   render() {
+    console.log(this.props)
     const { auth, authError } = this.props
     console.log(this.props.auth.email)
     // if (auth.uid) return <Redirect to="Feed" />
@@ -171,7 +174,7 @@ class Shipping extends Component {
 const mapStateToProps = (state) => {
   return {
     authError: state.auth.authError,
-    auth: state.firebase.auth
+    auth: state.firebase.auth,
   }
 }
 

@@ -1,7 +1,7 @@
 import { SELECT_STATE } from '../constants/action-types'
 
 const initialState = {
-    state: ''
+    selected_state: ''
 }
 
 const selectedReducer = (state = initialState, action) => {
@@ -9,7 +9,7 @@ const selectedReducer = (state = initialState, action) => {
         case SELECT_STATE:
           return {
               ...initialState, 
-            state: action.state
+            selected_state: action.selected_state
             };
         default:
           return state;

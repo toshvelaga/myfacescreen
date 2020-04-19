@@ -4,6 +4,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import { makeStyles } from '@material-ui/core/styles';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import store from '../../store/store'
 
 const useStyles = makeStyles((theme) => ({
     formControl: {
@@ -22,6 +23,8 @@ export default function SimpleSelect() {
   const handleChange = (event) => {
     setState(event.target.value);
     console.log(event.target.value)
+    const action = { type: 'SELECT_STATE', selected_state: event.target.value }
+    store.dispatch(action)
   };
 
   return(<>

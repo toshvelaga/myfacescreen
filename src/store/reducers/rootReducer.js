@@ -6,6 +6,7 @@ import { firestoreReducer } from 'redux-firestore'
 import navbarReducer from './navbarReducer'
 import foldReducer from './foldReducer'
 import toggleboxReducer from './toggleboxReducer'
+import selectedReducer from './selectedReducer'
 
 const rootReducer = combineReducers({
     auth: authReducer,
@@ -14,6 +15,7 @@ const rootReducer = combineReducers({
     navbarReducer,
     foldReducer,
     toggleboxReducer,
+    selectedReducer,
 });
 
 export default rootReducer;
