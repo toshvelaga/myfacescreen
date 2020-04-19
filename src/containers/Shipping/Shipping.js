@@ -18,6 +18,7 @@ import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
 
 import { Link } from "react-router-dom";
+import SimpleSelect from '../../components/Select/Select'
 
 import './Shipping.css'
 
@@ -119,27 +120,21 @@ class Shipping extends Component {
             </Grid>
 
             <Grid item xs={12} sm={6}>
-
-            <FormControl style={{width: '100%', display: 'inline-block'}} variant="outlined" >
-            {/* <InputLabel id="demo-simple-select-outlined-label">Select State</InputLabel> */}
-                <Select
-                labelId="demo-simple-select-outlined-label"
-                id="demo-simple-select-outlined"
-                margin="dense"
-                value="age"
+              <TextField
                 onChange={this.handleChange}
-                label="Select State"
+                margin="dense"
+                autoComplete="City"
+                name="City"
+                variant="outlined"
+                required
                 fullWidth
-                >
-                <MenuItem value="Select State">
-                    Select State
-                </MenuItem>
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
-                </Select>
-            </FormControl>
+                id="City"
+                label="City"
+              />
+            </Grid>
 
+            <Grid item xs={12}>
+            <SimpleSelect />
             </Grid>
 
           </Grid>
