@@ -35,7 +35,7 @@ class SignUp extends Component {
 
   render() {
     const { auth, authError } = this.props
-    if (auth.uid) return <Redirect to="Feed" />
+    // if (auth.uid) return <Redirect to="Feed" />
     return (<>
       {/* <Header /> */}
       <div className="container">

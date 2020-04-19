@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router'
 import { signUp } from '../../store/actions/actions'
@@ -10,25 +9,27 @@ import Button from '@material-ui/core/Button';
 // import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 // import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-
-import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import InputLabel from '@material-ui/core/InputLabel';
-
 import { Link } from "react-router-dom";
 import SimpleSelect from '../../components/Select/Select'
+import firebase from '../../firebase/fbConfig'
 
 import './Shipping.css'
+import store from '../../store/store';
+
+let db = firebase.firestore();
 
 class Shipping extends Component {
   state = {
     email: '',
     password: '',
     firstName: '',
-    lastName: ''
+    lastName: '',
+    AddressLine1: '',
+    AddressLine2: '',
+    ZipCode: '',
+    City: ''
   }
+
   handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value
@@ -37,11 +38,23 @@ class Shipping extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    this.props.signUp(this.state)
+
+    const ref =  db.collection("users").doc(this.props.auth.uid).collection("customers");
+    ref.add({
+      First_Name: this.state.firstName,
+      Last_Name: this.state.lastName,
+      Address_Line_1: this.state.AddressLine1,
+      Address_Line_2: this.state.AddressLine2,
+      Zip_Code: this.state.ZipCode,
+      City: this.state.City,
+      State: store.getState().selectedReducer.selected_state
+    })
   }
 
   render() {
-    // const { auth, authError } = this.props
+    console.log(this.props)
+    const { auth, authError } = this.props
+    console.log(this.props.auth.email)
     // if (auth.uid) return <Redirect to="Feed" />
     return (<>
       {/* <Header /> */}
@@ -96,7 +109,6 @@ class Shipping extends Component {
                 onChange={this.handleChange}
                 margin="dense"
                 variant="outlined"
-                required
                 fullWidth
                 id="AddressLine2"
                 label="Address Line 2 (Optional)"
@@ -162,13 +174,13 @@ class Shipping extends Component {
 const mapStateToProps = (state) => {
   return {
     authError: state.auth.authError,
-    auth: state.firebase.auth
+    auth: state.firebase.auth,
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    signUp: (newUser) => dispatch(signUp(newUser))
+    // signUp: (newUser) => dispatch(signUp(newUser))
   }
 }
 

@@ -1,7 +1,7 @@
 import { USE_FACE, UPLOAD_DESIGN } from '../constants/action-types'
 
 const initialState = {
-    use_face: false,
+    use_face: true,
     upload_design: false,
 }
 
