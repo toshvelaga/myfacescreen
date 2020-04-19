@@ -2,7 +2,7 @@ import React from 'react';
 import PurpleButton from '../../Buttons/PurpleButton/PurpleButton'
 import SquareButton from '../../Buttons/SquareButton/SquareButton'
 import { connect } from 'react-redux'
-import './Fold_3.css'
+import './Fold_3_Selfie.css'
 import Cropper from '../../Cropper/Cropper';
 
 const Fold_3 = (props) => {

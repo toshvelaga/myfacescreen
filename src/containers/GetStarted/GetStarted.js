@@ -4,7 +4,7 @@ import QuizHeader from '../../components/QuizHeader/QuizHeader';
 
 import Fold_1 from '../../components/GetStartedFolds/Fold_1/Fold_1';
 import Fold_2 from '../../components/GetStartedFolds/Fold_2/Fold_2';
-import Fold_3 from '../../components/GetStartedFolds/Fold_3/Fold_3';
+import Fold_3 from '../../components/GetStartedFolds/Fold_3_Selfie/Fold_3_Selfie';
 import Fold_4 from '../../components/GetStartedFolds/Fold_4/Fold_4';
 import Fold_5 from '../../components/GetStartedFolds/Fold_5/Fold_5';
 import Fold_6 from '../../components/GetStartedFolds/Fold_6/Fold_6';
