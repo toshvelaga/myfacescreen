@@ -27,8 +27,17 @@ class Shipping extends Component {
     email: '',
     password: '',
     firstName: '',
-    lastName: ''
+    lastName: '',
+    AddressLine1: '',
+    AddressLine2: '',
+    ZipCode: '',
+    City: ''
   }
+
+  componentDidMount() {
+    
+  }
+
   handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value
@@ -37,7 +46,8 @@ class Shipping extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    this.props.signUp(this.state)
+    // this.props.signUp(this.state)
+    console.log('FUCKS')
   }
 
   render() {
@@ -169,7 +179,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    signUp: (newUser) => dispatch(signUp(newUser))
+    // signUp: (newUser) => dispatch(signUp(newUser))
   }
 }
 
