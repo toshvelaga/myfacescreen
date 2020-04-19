@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router'
 import { signUp } from '../../store/actions/actions'
@@ -10,17 +9,13 @@ import Button from '@material-ui/core/Button';
 // import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 // import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-
-import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import InputLabel from '@material-ui/core/InputLabel';
-
 import { Link } from "react-router-dom";
 import SimpleSelect from '../../components/Select/Select'
+import firebase from '../../firebase/fbConfig'
 
 import './Shipping.css'
+
+let db = firebase.firestore();
 
 class Shipping extends Component {
   state = {
@@ -34,10 +29,6 @@ class Shipping extends Component {
     City: ''
   }
 
-  componentDidMount() {
-    
-  }
-
   handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value
@@ -46,8 +37,16 @@ class Shipping extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    // this.props.signUp(this.state)
-    console.log('FUCKS')
+
+    const ref =  db.collection("users").doc(this.props.auth.uid).collection("customers");
+    ref.add({
+      First_Name: this.state.firstName,
+      Last_Name: this.state.lastName,
+      Address_Line_1: this.state.AddressLine1,
+      Address_Line_2: this.state.AddressLine2,
+      Zip_Code: this.state.ZipCode,
+      City: this.state.City
+    })
   }
 
   render() {
@@ -107,7 +106,6 @@ class Shipping extends Component {
                 onChange={this.handleChange}
                 margin="dense"
                 variant="outlined"
-                required
                 fullWidth
                 id="AddressLine2"
                 label="Address Line 2 (Optional)"
