@@ -90,7 +90,7 @@ class Cropper extends PureComponent {
       <div className="App">
         <div>
 
-        <label className="PurpleButton" for="group_image">Upload my face</label>
+    <label className="PurpleButton" for="group_image">{this.props.label}</label>
             <input style={{display: 'none'}} id="group_image" type="file" accept="image/*" onChange={this.onSelectFile} />
 
         </div>

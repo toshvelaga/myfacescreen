@@ -36,9 +36,6 @@ class GetStarted extends Component {
 
         {this.props.USE_FACE ?  <Fold_3_Selfie /> : <Fold_3_Custom />}
 
-        {/* <Fold_3_Custom />
-        <Fold_3_Selfie /> */}
-
         {/* FOLD 4 */}
 
         <Fold_4 />

@@ -11,7 +11,7 @@ const Fold_3_Selfie = (props) => {
     <div style={{display: props.display}} className="part3">
         <p style={{marginTop: '10rem', marginBottom: '2rem'}}>Let's create your face screen</p>
         <div style={{width: 'auto', height: '250px', display: 'inline-block'}}>
-            <Cropper />            
+            <Cropper label="Upload my face" />            
         </div>
 
         <p>Don't like your selfie?<br />Try again.</p>
