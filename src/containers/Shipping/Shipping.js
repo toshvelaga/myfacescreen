@@ -105,6 +105,10 @@ class Shipping extends Component {
               />
             </Grid>
 
+            <Grid item xs={12}>
+                <SimpleSelect />
+            </Grid>
+
             <Grid item xs={12} sm={6}>
               <TextField
                 onChange={this.handleChange}
@@ -131,10 +135,6 @@ class Shipping extends Component {
                 id="City"
                 label="City"
               />
-            </Grid>
-
-            <Grid item xs={12}>
-            <SimpleSelect />
             </Grid>
 
           </Grid>
