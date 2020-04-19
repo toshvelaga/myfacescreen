@@ -1,6 +1,6 @@
 .part2card {
-    border: 1px solid gray;
-    border-radius: 3px;
+    border: 2px solid gray;
+    border-radius: 5px;
     width: 15em;
     padding: 2rem;
     margin: 3rem;
@@ -9,9 +9,9 @@
 }
 
 .part2card-selected {
-    border: 1px solid #44b9ad;
-    background-color: #8ed7ce;
-    border-radius: 3px;
+    border: 3px solid #1aae9e;
+    /* background-color: #8ed7ce; */
+    border-radius: 5px;
     width: 15em;
     padding: 2rem;
     margin: 3rem;
@@ -20,11 +20,11 @@
 }
 
 .part2card:hover {
-    border: 1px solid #44b9ad;
+    border: 2px solid #1aae9e;
 }
 
-.part2 > p {
-    margin-top: 5rem;
+.part2 > div > p {
+    margin-top: 4rem;
     vertical-align: middle;
     /* margin-bottom: 5rem; */
 }

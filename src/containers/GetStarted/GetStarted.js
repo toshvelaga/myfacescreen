@@ -8,6 +8,7 @@ import Fold_3 from '../../components/GetStartedFolds/Fold_3/Fold_3';
 import Fold_4 from '../../components/GetStartedFolds/Fold_4/Fold_4';
 import Fold_5 from '../../components/GetStartedFolds/Fold_5/Fold_5';
 import Fold_6 from '../../components/GetStartedFolds/Fold_6/Fold_6';
+import Fold_7 from '../../components/GetStartedFolds/Fold_7/Fold_7'; 
 
 import './GetStarted.css'
 
@@ -42,6 +43,10 @@ class GetStarted extends Component {
         {/* CONTAINER 6 */}
 
         <Fold_6 />
+
+        {/* CONTAINER 7 */}
+
+        <Fold_7 />
 
         </>);
     }
