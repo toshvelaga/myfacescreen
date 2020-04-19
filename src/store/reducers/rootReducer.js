@@ -7,6 +7,7 @@ import navbarReducer from './navbarReducer'
 import foldReducer from './foldReducer'
 import toggleboxReducer from './toggleboxReducer'
 import selectedReducer from './selectedReducer'
+import progressbarReducer from './progressbarReducer'
 
 const rootReducer = combineReducers({
     auth: authReducer,
@@ -16,6 +17,7 @@ const rootReducer = combineReducers({
     foldReducer,
     toggleboxReducer,
     selectedReducer,
+    progressbarReducer,
 });
 
 export default rootReducer;

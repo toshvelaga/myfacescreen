@@ -17,7 +17,7 @@ const Fold_3_Selfie = (props) => {
         <p>Don't like your selfie?<br />Try again.</p>
         <PurpleButton name="Click to add another member" />
         <div style={{marginTop: '2rem'}}>
-            <SquareButton fx={props.showFold_4} />
+            <SquareButton fx={() => { props.showFold_4(); props.segment()}} />
         </div>
     </div>
     </>);
@@ -33,6 +33,7 @@ const mapDispatchToProps = dispatch => {
     return {
       // dispatching plain actions
       showFold_4: () => dispatch({type: 'SHOW_FOLD_4'}),
+      segment: () => dispatch({type: 'SEGMENT_4'}),
     }
 }
  

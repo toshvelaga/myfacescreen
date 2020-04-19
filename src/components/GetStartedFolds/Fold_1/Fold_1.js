@@ -9,7 +9,7 @@ const Fold_1 = (props) => {
             <p>Do you have a selfie ready?<br />This will help us get the right face measurement for your mask.</p>
             <img src={facemask_BLACK} style={{width: '20rem', height: '22rem'}} />
             <p style={{marginTop: '1rem', marginBottom: '1rem'}}>Let's get started.</p>
-            <SquareButton fx={props.showFold_2} />
+            <SquareButton fx={() => { props.showFold_2(); props.segment() }} />
         </div>
     );
 }
@@ -18,6 +18,7 @@ const mapDispatchToProps = dispatch => {
     return {
       // dispatching plain actions
       showFold_2: () => dispatch({type: 'SHOW_FOLD_2'}),
+      segment: () => dispatch({type: 'SEGMENT_2'})
     }
 }
  

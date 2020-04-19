@@ -14,7 +14,7 @@ const Fold_3_Custom = (props) => {
 
             <p>Looks good. Now select the outline.</p>
             <div style={{marginTop: '2rem'}}>
-                <SquareButton fx={props.showFold_4} />
+                <SquareButton fx={() => { props.showFold_4(); props.segment() }} />
             </div>
         </div>
     </>);
@@ -30,6 +30,7 @@ const mapDispatchToProps = dispatch => {
     return {
       // dispatching plain actions
       showFold_4: () => dispatch({type: 'SHOW_FOLD_4'}),
+      segment: () => dispatch({type: 'SEGMENT_4'}),
     }
 }
  

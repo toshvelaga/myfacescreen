@@ -11,7 +11,7 @@ const Fold_2 = (props) => {
         <div onClick={props.toggleClass1} className={!props.usedFace ? "part2card" : "part2card-selected"}><p>Use my face.</p></div>
         <div onClick={props.toggleClass2} className={!props.uploadedDesign ? "part2card" : "part2card-selected"}><p>Upload my own design.</p></div>
         <div>
-            <SquareButton fx={props.showFold_3} />
+            <SquareButton fx={() => { props.showFold_3(); props.segment() }} />
         </div>
     </div>
     );
@@ -29,6 +29,7 @@ const mapDispatchToProps = dispatch => {
     return {
       // dispatching plain actions
       showFold_3: () => dispatch({type: 'SHOW_FOLD_3'}),
+      segment: () => dispatch({type: 'SEGMENT_3'}),
       toggleClass1: () => dispatch({type: 'USE_FACE'}),
       toggleClass2: () => dispatch({type: 'UPLOAD_DESIGN'})
     }
