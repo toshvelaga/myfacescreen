@@ -4,7 +4,8 @@ const initialState = {
     Fold_2: 'none',
     Fold_3: 'none',
     Fold_4: 'none',
-    Fold_5: 'none'
+    Fold_5: 'none',
+    Fold_6: 'none'
 }
 
 const foldReducer = (state = initialState, action) => {

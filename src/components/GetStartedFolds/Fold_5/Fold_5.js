@@ -11,7 +11,7 @@ const Fold_5 = (props) => {
         <div style={{marginTop: '10rem', display: props.display}} className="part5">
             <SignUp />
             <br></br>
-            <SquareButton fx={props.showDiv6}/>
+            <SquareButton fx={props.showFold_6}/>
         </div>
     </>);
 }
