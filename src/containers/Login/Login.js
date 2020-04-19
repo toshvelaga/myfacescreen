@@ -9,6 +9,8 @@ import Typography from '@material-ui/core/Typography';
 // import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { Link } from "react-router-dom";
 // import Header from '../../components/Header/Header';
+import { withStyles } from '@material-ui/core/styles';
+
 
 import './Login.css'
 
@@ -30,7 +32,7 @@ class Login extends Component {
   render() {
 
     const { authError, auth, classes } = this.props
-    if (auth.uid) return <Redirect to='/Feed' />
+    // if (auth.uid) return <Redirect to='/Feed' />
 
     return (<>
       {/* <Header /> */}
@@ -47,6 +49,8 @@ class Login extends Component {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
+
+          
 
           <div className="SignIn">
           <TextField 
@@ -102,6 +106,8 @@ class Login extends Component {
     )
   }
 }
+
+
 
 const mapStateToProps = (state) => {
   return {

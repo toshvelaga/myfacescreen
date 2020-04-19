@@ -11,11 +11,18 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 // import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 
+import MenuItem from '@material-ui/core/MenuItem';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import InputLabel from '@material-ui/core/InputLabel';
+
 import { Link } from "react-router-dom";
+import SimpleSelect from '../../components/Select/Select'
 
-import './Signup.css'
+import './Shipping.css'
 
-class SignUp extends Component {
+class Shipping extends Component {
   state = {
     email: '',
     password: '',
@@ -34,24 +41,15 @@ class SignUp extends Component {
   }
 
   render() {
-    const { auth, authError } = this.props
-    if (auth.uid) return <Redirect to="Feed" />
+    // const { auth, authError } = this.props
+    // if (auth.uid) return <Redirect to="Feed" />
     return (<>
       {/* <Header /> */}
       <div className="container">
-        <form onSubmit={this.handleSubmit} className="SignUp">
-          <div style={{display: 'inline-block', marginTop: '2rem'}}>
-            {/* <Avatar style={{backgroundColor: '#dd004f', fontSize: '2rem'}}>
-              <LockOutlinedIcon />
-            </Avatar> */}
-          </div>
-
-          <Typography style={{marginBottom: '1rem'}} component="h1" variant="h6">
-            CREATE YOUR ACCOUNT
-          </Typography>
-          <p style={{marginBottom: '2rem'}}>So you can manage your shipments.</p>
+        <form onSubmit={this.handleSubmit} className="Shipping">
 
           <Grid container spacing={2}>
+
             <Grid item xs={12} sm={6}>
               <TextField
                 onChange={this.handleChange}
@@ -86,12 +84,13 @@ class SignUp extends Component {
                 variant="outlined"
                 required
                 fullWidth
-                id="email"
-                label="Email Address"
-                name="email"
-                autoComplete="email"
+                id="AddressLine1"
+                label="Address Line 1"
+                name="AddressLine1"
+                autoComplete="AddressLine1"
               />
             </Grid>
+
             <Grid item xs={12}>
               <TextField
                 onChange={this.handleChange}
@@ -99,22 +98,47 @@ class SignUp extends Component {
                 variant="outlined"
                 required
                 fullWidth
-                name="password"
-                label="Password"
-                type="password"
-                id="password"
-                autoComplete="current-password"
+                id="AddressLine2"
+                label="Address Line 2 (Optional)"
+                name="AddressLine2"
+                autoComplete="AddressLine2"
+              />
+            </Grid>
+
+            <Grid item xs={12}>
+                <SimpleSelect />
+            </Grid>
+
+            <Grid item xs={12} sm={6}>
+              <TextField
+                onChange={this.handleChange}
+                margin="dense"
+                autoComplete="ZipCode"
+                name="ZipCode"
+                variant="outlined"
+                required
+                fullWidth
+                id="ZipCode"
+                label="Zip Code"
+              />
+            </Grid>
+
+            <Grid item xs={12} sm={6}>
+              <TextField
+                onChange={this.handleChange}
+                margin="dense"
+                autoComplete="City"
+                name="City"
+                variant="outlined"
+                required
+                fullWidth
+                id="City"
+                label="City"
               />
             </Grid>
 
           </Grid>
-
-          <Grid container justify="flex">
-            <Grid item>
-                <p>By creating an account you agree to our terms</p>
-            </Grid>
-          </Grid>
-
+          <br />
           <Button
             style={{backgroundColor: '#6658f5'}}
             type="submit"
@@ -125,23 +149,9 @@ class SignUp extends Component {
             Continue
           </Button>
 
-          <p>OR</p>
-
-          <Button
-            style={{backgroundColor: '#1aae9e'}}
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-          >
-            Log in with Google
-          </Button>
-
-          <p>Already a member? Log in.</p>
-
-          <div className="error">
+          {/* <div className="error">
             {authError ? <p>{authError}</p> : null}
-          </div>
+          </div> */}
         </form>
       </div>
       </>
@@ -162,4 +172,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
+export default connect(mapStateToProps, mapDispatchToProps)(Shipping);
