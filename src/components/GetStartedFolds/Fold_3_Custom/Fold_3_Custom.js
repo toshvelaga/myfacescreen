@@ -4,7 +4,7 @@ import SquareButton from '../../Buttons/SquareButton/SquareButton'
 // import PurpleButton from '../../Buttons/PurpleButton/PurpleButton'
 import Cropper from '../../Cropper/Cropper'
 
-const Fold_3_Custom = () => {
+const Fold_3_Custom = (props) => {
     return (<>
         <div style={{display: props.display}} className="part3">
             <p style={{marginTop: '10rem', marginBottom: '2rem'}}>Upload an image</p>

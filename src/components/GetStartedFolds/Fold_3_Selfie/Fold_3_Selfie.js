@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import './Fold_3_Selfie.css'
 import Cropper from '../../Cropper/Cropper';
 
-const Fold_3 = (props) => {
+const Fold_3_Selfie = (props) => {
 
     return (<>        
     <div style={{display: props.display}} className="part3">
@@ -36,4 +36,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
  
-export default connect(mapStateToProps, mapDispatchToProps)(Fold_3);
+export default connect(mapStateToProps, mapDispatchToProps)(Fold_3_Selfie);

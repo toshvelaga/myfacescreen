@@ -4,18 +4,22 @@ import QuizHeader from '../../components/QuizHeader/QuizHeader';
 
 import Fold_1 from '../../components/GetStartedFolds/Fold_1/Fold_1';
 import Fold_2 from '../../components/GetStartedFolds/Fold_2/Fold_2';
-import Fold_3 from '../../components/GetStartedFolds/Fold_3_Selfie/Fold_3_Selfie';
+import Fold_3_Custom from '../../components/GetStartedFolds/Fold_3_Custom/Fold_3_Custom';
+import Fold_3_Selfie from '../../components/GetStartedFolds/Fold_3_Selfie/Fold_3_Selfie';
 import Fold_4 from '../../components/GetStartedFolds/Fold_4/Fold_4';
 import Fold_5 from '../../components/GetStartedFolds/Fold_5/Fold_5';
 import Fold_6 from '../../components/GetStartedFolds/Fold_6/Fold_6';
 import Fold_7 from '../../components/GetStartedFolds/Fold_7/Fold_7'; 
 
+import { connect } from 'react-redux'
+
 import './GetStarted.css'
 
 class GetStarted extends Component {
-    state = { 
-    }
-
+    state = {
+        
+    };
+   
     render() { 
         return (<>
         <HeaderTitle />
@@ -30,7 +34,10 @@ class GetStarted extends Component {
 
         {/* FOLD 3 */}
 
-        <Fold_3 />
+        {this.props.USE_FACE ?  <Fold_3_Selfie /> : <Fold_3_Custom />}
+
+        {/* <Fold_3_Custom />
+        <Fold_3_Selfie /> */}
 
         {/* FOLD 4 */}
 
@@ -51,5 +58,11 @@ class GetStarted extends Component {
         </>);
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        USE_FACE: state.toggleboxReducer.use_face
+    }
+}
  
-export default GetStarted;
+export default connect(mapStateToProps, null)(GetStarted);
