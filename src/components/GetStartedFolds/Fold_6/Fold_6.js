@@ -8,7 +8,7 @@ import SquareButton from '../../Buttons/SquareButton/SquareButton';
 const Fold_6 = (props) => {
     return (<>
         <div style={{display: props.display, marginTop: '5rem'}} className="part6">
-            <p style={{marginTop: '2rem'}}>You're logged in. (Log out)<br />iggsloop@gmail.com</p>
+            <p style={{marginTop: '2rem'}}>You're logged in as {props.auth.email}</p>
             <p>WHERE SHOULD WE SHIP?</p>
             <Shipping />
             <div style={{marginTop: '2rem'}}>
@@ -21,6 +21,7 @@ const Fold_6 = (props) => {
 const mapStateToProps = (state) => {
     return {
         display: state.foldReducer.Fold_6,
+        auth: state.firebase.auth
     }
 }
 

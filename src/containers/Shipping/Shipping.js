@@ -41,7 +41,8 @@ class Shipping extends Component {
   }
 
   render() {
-    // const { auth, authError } = this.props
+    const { auth, authError } = this.props
+    console.log(this.props.auth.email)
     // if (auth.uid) return <Redirect to="Feed" />
     return (<>
       {/* <Header /> */}
