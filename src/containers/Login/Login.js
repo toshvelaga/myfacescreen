@@ -11,8 +11,11 @@ import { Link } from "react-router-dom";
 // import Header from '../../components/Header/Header';
 import { withStyles } from '@material-ui/core/styles';
 
+import { ThemeProvider } from "@material-ui/styles";
+import { createMuiTheme } from "@material-ui/core/styles";
 
 import './Login.css'
+import { red } from '@material-ui/core/colors';
 
 class Login extends Component {
   state = {
@@ -36,42 +39,34 @@ class Login extends Component {
 
     return (<>
       {/* <Header /> */}
-      <div className="container">
+      <div style={{backgroundColor: '#ffac33', height: '100vh'}} className="container">
 
         <form onSubmit={this.handleSubmit} className="white">
-
-          <div style={{display: 'inline-block', marginTop: '2rem'}}>
-          {/* <Avatar style={{backgroundColor: '#dd004f', fontSize: '2rem'}}>
-            <LockOutlinedIcon />
-          </Avatar> */}
-          </div>
+      
         
-          <Typography component="h1" variant="h5">
-            Sign in
-          </Typography>
+          <div className="LogIn">
 
-          
+            <Typography component="h1" variant="h5">
+              WELCOME BACK
+            </Typography>
+            <p>Please login to continue.</p>
 
-          <div className="SignIn">
-          <TextField 
-            className="SignIn"
-            style={{marginTop: '2rem'}}
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            id="email"
-            label="Email Address"
-            notched
-            name="email"
-            autoComplete="email"
-            onChange={this.handleChange}
-          />
+            <TextField 
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              id="email"
+              label="Email Address"
+              name="email"
+              autoComplete="email"
+              onChange={this.handleChange}
+            />
+
           <br></br>
           <TextField 
-            // style={{width: '50%'}}
-            variant="outlined"
             margin="normal"
+            variant="outlined"
             required
             fullWidth
             id="password"
@@ -82,16 +77,29 @@ class Login extends Component {
           />
           <div className="submit">
             <Button
-              style={{marginTop: '1rem', marginBottom: '2rem', color: 'white', backgroundColor: '#0378d8'}}
+              style={{marginTop: '1rem', color: 'white', backgroundColor: '#6658f5'}}
               type="submit"
               fullWidth
               variant="contained"
               color="primary"
             >
-              Sign In
+              Log In
             </Button>
+
+            <p>OR</p>
+
+            <Button
+              style={{marginBottom: '2rem', color: 'white', backgroundColor: '#1aae9e'}}
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+            >
+              LOG IN WITH GOOGLE
+            </Button>
+
             <p>
-              <Link style={{textDecoration: 'none', color: '#0378d8'}} to="/SignUp">Don't have an account? Sign Up</Link>
+              <Link style={{textDecoration: 'none', color: '#0378d8'}} to="/join">Don't have an account? Sign Up</Link>
             </p>
             <div>
               { authError ? <p>{authError}</p> : null}
