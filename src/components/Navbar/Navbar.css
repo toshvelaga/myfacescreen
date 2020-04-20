@@ -1,9 +1,17 @@
 .mainNavbar span {
     color: #453d3a;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     font-size: 14px;
     vertical-align: middle;
+}
+
+.mainNavbar span:hover {
+    color: #7e7876;
+}
+
+.mainNavbar > a {
+    text-decoration: none;
 }
 
 .mainNavbar div {
