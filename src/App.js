@@ -3,6 +3,7 @@ import './App.css';
 import Home from './containers/Home/Home'
 import GetStarted from './containers/GetStarted/GetStarted';
 import Login from './containers/Login/Login'
+import Box from './containers/Box/Box'
 
 import {
   BrowserRouter as Router,
@@ -26,6 +27,9 @@ function App() {
         </Route>
         <Route path="/login">
           <Login />
+        </Route>
+        <Route path="/box">
+          <Box />
         </Route>
       </Router>
     </div>

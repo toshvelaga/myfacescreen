@@ -35,15 +35,14 @@ class Login extends Component {
   render() {
 
     const { authError, auth, classes } = this.props
-    // if (auth.uid) return <Redirect to='/Feed' />
+    if (auth.uid) return <Redirect to='/box' />
 
     return (<>
       {/* <Header /> */}
       <div style={{backgroundColor: '#ffac33', height: '100vh'}} className="container">
 
-        <form onSubmit={this.handleSubmit} className="white">
+        <form onSubmit={this.handleSubmit}>
       
-        
           <div className="LogIn">
 
             <Typography component="h1" variant="h5">

@@ -133,19 +133,7 @@ class SignUp extends Component {
           </div>
         </form>
         
-        {/* <div className="SignUp">
-          <Button onClick={() => alert('hi')}
-              style={{backgroundColor: '#1aae9e'}}
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-            >
-              Log in with Google
-          </Button>
-          <p>Already a member? Log in.</p>
-        </div> */}
-
+        <br></br>
         <SignUpWithGoogle />
 
       </div>
