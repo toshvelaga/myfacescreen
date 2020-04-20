@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-class Products extends Component {
+class HowItWorks extends Component {
     state = {  }
     render() { 
         return (<>
-        <p>THIS THE PRODUCTS PAGE</p>
+        <p>HOW IT WORKS PAGE</p>
         </>);
     }
 }
  
-export default Products;
+export default HowItWorks;

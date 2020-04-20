@@ -4,6 +4,8 @@ import medicalmask from '../../assets/medical-mask.svg'
 import Hamburger from '../Hamburger/Hamburger'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import box from '../../assets/box.svg'
+import box_2 from '../../assets/open-box-2.svg'
 
 const Navbar = (props) => {
     return (<>
@@ -12,7 +14,8 @@ const Navbar = (props) => {
         <div><Hamburger /></div>
         <span onClick={props.openNav}>MENU</span>
         <Link to="get-started"><span>GET STARTED</span></Link>
-        <span>PRODUCTS</span>
+        <Link to="products"><span>PRODUCTS</span></Link>
+
         {/* <span>GIFT</span> */}
         
         <span><img src={medicalmask} style={{width: '4rem', height: '4rem'}}/></span>
@@ -20,7 +23,8 @@ const Navbar = (props) => {
         <Link to="how-it-works"><span>HOW IT WORKS</span></Link>
         <Link to="login"><span>LOGIN</span></Link>
         <Link to="join"><span>JOIN</span></Link>
-        <Link to="box"><span>BOX</span></Link>
+        <Link to="box"><span>BOX<span><img src={box} style={{width: '3rem', height: '3rem', marginLeft: '0rem'}} /></span></span></Link>
+    
     </div>
     </>);
 }
