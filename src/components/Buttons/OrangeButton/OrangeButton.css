@@ -1,13 +1,14 @@
 .OrangeButton {
     background-color: #ff6002;
     color: white;
-    font-weight: bold;
-    /* font-size: 1rem; */
+    font-size: 1rem;
     text-transform: uppercase;
     text-decoration: none;
     outline: none;
     padding: .8rem 2rem;
     border-radius: 50px;
+    border: none;
+    font-weight: bolder;
 }
 
 .OrangeButton:hover {
