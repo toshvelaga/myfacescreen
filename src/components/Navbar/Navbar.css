@@ -1,8 +1,17 @@
 .mainNavbar span {
     color: #453d3a;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
     font-size: 14px;
+    vertical-align: middle;
+}
+
+.mainNavbar span:hover {
+    color: #7e7876;
+}
+
+.mainNavbar > a {
+    text-decoration: none;
     vertical-align: middle;
 }
 
@@ -12,3 +21,18 @@
     /* margin-top: 2rem; */
     margin-right: 1rem;
 }
+
+@media only screen and (max-width: 1024px) {
+    .mainNavbar { display: none; }   /* hide it elsewhere */
+  }
+
+.mainNavbarSmallScreen {
+    display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .mainNavbarSmallScreen { display: contents; justify-content: space-between; } 
+    
+    .mainNavbarSmallScreen span { vertical-align: middle; }  /* hide it elsewhere */
+    .mainNavbarSmallScreen div { display: inline-block;}
+  }

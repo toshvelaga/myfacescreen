@@ -10,6 +10,7 @@ import Button from '@material-ui/core/Button';
 // import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 // import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import SignUpWithGoogle from '../SignUpWithGoogle/SignUpWithGoogle';
 
 import { Link } from "react-router-dom";
 
@@ -127,22 +128,14 @@ class SignUp extends Component {
 
           <p>OR</p>
 
-          <Button
-            style={{backgroundColor: '#1aae9e'}}
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-          >
-            Log in with Google
-          </Button>
-
-          <p>Already a member? Log in.</p>
-
           <div className="error">
             {authError ? <p>{authError}</p> : null}
           </div>
         </form>
+        
+        <br></br>
+        <SignUpWithGoogle />
+
       </div>
       </>
     )

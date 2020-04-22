@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-class Products extends Component {
+class Box extends Component {
     state = {  }
     render() { 
         return (<>
-        <p>THIS THE PRODUCTS PAGE</p>
+        <p>THIS THE BOX</p>
         </>);
     }
 }
  
-export default Products;
+export default Box;
