@@ -14,13 +14,13 @@ const Navbar = (props) => {
         <div><Hamburger /></div>
         <span onClick={props.openNav}>MENU</span>
         <Link to="get-started"><span>GET STARTED</span></Link>
-        <Link to="products"><span>PRODUCTS</span></Link>
+        <Link to="how-it-works"><span>HOW IT WORKS</span></Link>
 
         {/* <span>GIFT</span> */}
         
         <span><img src={medicalmask} style={{width: '4rem', height: '4rem'}}/></span>
         
-        <Link to="how-it-works"><span>HOW IT WORKS</span></Link>
+        <Link to="products"><span>PRODUCTS</span></Link>
         <Link to="login"><span>LOGIN</span></Link>
         <Link to="join"><span>JOIN</span></Link>
         <Link to="box"><span>BOX</span></Link>
