@@ -41,7 +41,10 @@ class HowItWorks extends Component {
                 </Grid>
             </Grid>
             <Hr />
-            <OrangeButton text="Get Started" />
+            <div style={{marginTop: '2rem', marginBottom: '3rem', color: '#a59b98'}}>
+                <h3>By now you’re probably convinced<br /> of the wisdom of joining the club.</h3>
+                <OrangeButton text="Get Started" />
+            </div>
             <Footer />
 
         </div>
