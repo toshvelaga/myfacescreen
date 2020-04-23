@@ -39,6 +39,7 @@ function App() {
         <Route path="/box">
           <Box />
         </Route>
+        <Route exact path="/" component={Home} />
       </Router>
     </div>
   );
