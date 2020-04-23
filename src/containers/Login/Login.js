@@ -39,7 +39,9 @@ class Login extends Component {
 
     return (<>
       {/* <Header /> */}
-      <div style={{backgroundColor: '#ffac33', height: '100vh'}} className="container">
+
+      {/* ORANGE COLOR FOR BACKGROUND = #ffac33 */}
+      <div style={{backgroundColor: 'white', height: '100vh'}} className="container">
 
         <form onSubmit={this.handleSubmit}>
       

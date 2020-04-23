@@ -4,6 +4,10 @@
     font-size: 15px;
     line-height: 24px;
     color: #7b7b7b;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
   }
   .site-footer hr {
     border-top-color: #bbb;

@@ -2,3 +2,14 @@
     color: #55473e;
     text-transform: uppercase;
 }
+
+.HowItWorks_2 {
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+}
+
+.HowItWorks_2 p {
+    width: 60%;
+    display: inline-block;
+    color: #a59b98;
+}

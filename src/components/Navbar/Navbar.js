@@ -24,7 +24,7 @@ const Navbar = (props) => {
         <Link to="login"><span>LOGIN</span></Link>
         <Link to="join"><span>JOIN</span></Link>
         <Link to="box"><span>BOX</span></Link>
-        <span><img src={box} style={{width: '3rem', height: '3rem', marginLeft: '0rem'}} /></span>
+        <Link to="box"><span><img src={box} style={{width: '3rem', height: '3rem', marginLeft: '0rem'}} /></span></Link>
     </div>
 
     <div className="mainNavbarSmallScreen">
