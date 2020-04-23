@@ -12,6 +12,8 @@ import freedelivery from '../../assets/freedelivery.svg'
 import mail from '../../assets/mail.svg'
 import shield2 from '../../assets/shield2.svg'
 
+import { Link } from "react-router-dom"
+
 import './HowItWorks.css'
 
 const styles = {
@@ -29,8 +31,9 @@ class HowItWorks extends Component {
             <Hr />
             <h1 style={{color: '#55473e'}}>How It Works</h1>
             <p style={{color: '#a59b98'}}>Our goal is to craft the highest quality protective face masks<br /> for you and the ones you care about.</p>
-            <OrangeButton text="Get Started"/>
-
+            <Link to="get-started">
+                <OrangeButton text="Get Started"/>
+            </Link>
             <div className="HowItWorks_2">
                 <Grid container spacing={2}>
                     <Grid item xs={12} sm={6}>
@@ -68,8 +71,10 @@ class HowItWorks extends Component {
 
             <Hr />
             <div style={{marginTop: '2rem', marginBottom: '3rem', color: '#a59b98'}}>
-                <h3>By now you’re probably convinced<br /> of the wisdom of joining the club.</h3>
-                <OrangeButton text="Get Started" />
+                <h3>By now you’re probably convinced<br /> of the wisdom of joining Face Mask Screen</h3>
+            <Link to="get-started">
+                <OrangeButton text="Get Started"/>
+            </Link>
             </div>
             <Footer />
 
