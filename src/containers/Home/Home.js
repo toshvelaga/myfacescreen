@@ -8,6 +8,8 @@ import OrangeButton from '../../components/Buttons/OrangeButton/OrangeButton'
 import GreyBtn from '../../components/Buttons/GreyButton/GreyButton';
 import Footer from '../../components/Footer/Footer';
 
+import { Link } from 'react-router-dom'
+
 class Home extends Component {
     state = {  }
     render() { 
@@ -17,12 +19,16 @@ class Home extends Component {
             <Navbar />
             <HeroImageHome />
             <HomeDividerTwo />
-            <span style={{marginRight: '.8rem'}}>
-                <OrangeButton text="Take the Quiz"/>
-            </span>
-            <span style={{marginLeft: '.8rem'}}>
-                <GreyBtn text="See Trending" />
-            </span>
+            <Link to="get-started">
+                <span style={{marginRight: '.8rem'}}>
+                    <OrangeButton text="Get Started"/>
+                </span>
+            </Link>
+            <Link to="products">
+                <span style={{marginLeft: '.8rem'}}>
+                    <GreyBtn text="See Products" />
+                </span>
+            </Link>
             <div style={{marginTop: '5rem'}}>
                 <Footer />
             </div>

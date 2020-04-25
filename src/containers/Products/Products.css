@@ -1,4 +1,9 @@
 .Products > p {
-    width: 50%;
+    width: 60%;
     display: inline-block;
+}
+
+.Products > img {
+    max-width: 100%;
+    height: auto;
 }
