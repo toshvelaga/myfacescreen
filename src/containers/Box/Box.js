@@ -13,7 +13,7 @@ class Box extends Component {
             <Navbar />
             <Hr />
             <img src={noun_box_2} style={{height: '20rem', width: '20rem'}} />
-            <h2>Your Box is currently empty.</h2>
+            <h2 style={{color: '#55473e'}}>Your Box is currently empty.</h2>
         </div>
         </>);
     }

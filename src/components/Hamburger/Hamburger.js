@@ -13,9 +13,11 @@ const Hamburger = (props) => {
         <a className="closebtn" onClick={props.closeNav}>&times;</a>
         <Link onClick={props.closeNav} to="/home">HOME</Link>
         <Link to="/get-started">GET STARTED</Link>
-        <Link to="products">OUR PRODUCTS</Link>
-        <Link to="/gift">GIFT THE MASK</Link>
+        <Link to="/how-it-works">HOW IT WORKS</Link>
+        <Link to="/products">OUR PRODUCTS</Link>
         <Link onClick={props.signOut} to="/login">LOGOUT</Link>
+        <Link to="/join">JOIN</Link>
+        <Link to="/box">BOX</Link>
     </div>
 
     <div id="nav-icon1" onClick={props.openNav}>

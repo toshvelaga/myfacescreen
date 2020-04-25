@@ -29,7 +29,11 @@ const Navbar = (props) => {
 
     <div className="mainNavbarSmallScreen">
         <div style={{float: 'left'}}><Hamburger /></div>
-        <span style={{float: 'right', marginRight: '1rem'}}><img src={box} style={{width: '3rem', height: '3rem', marginLeft: '0rem'}} /></span>
+        <span style={{float: 'right', marginRight: '1rem'}}>
+            <Link to="box">
+                <img src={box} style={{width: '3rem', height: '3rem', marginLeft: '0rem'}} />
+            </Link>
+        </span>
     </div>
     </>);
 }
