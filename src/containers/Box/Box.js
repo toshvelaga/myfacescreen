@@ -4,9 +4,26 @@ import HeaderTitle from '../../components/HeaderTitle/HeaderTitle'
 import Hr from '../../components/Hr/Hr'
 import BrownBox from '../../assets/BrownBox.svg'
 import { Link } from 'react-router-dom'
+import firebase from '../../firebase/fbConfig'
+
+let db = firebase.firestore();
 
 class Box extends Component {
-    state = {  }
+    state = {         
+        reviewData: []
+    }
+
+    // componentDidMount() {
+    //     const docRef = db.collection("users").doc(this.props.auth.uid).collection("customers").get()
+    //     .then(querySnapshot => {
+    //         querySnapshot.docs.map(doc => {
+    //             var joined = this.state.reviewData.concat(doc.data())
+    //             this.setState({reviewData: joined})
+    //             console.log(joined)
+    //         });
+    //     });
+    // }
+
     render() { 
         return (<>
         <div>
