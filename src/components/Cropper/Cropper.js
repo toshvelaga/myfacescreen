@@ -87,8 +87,8 @@ class Cropper extends PureComponent {
     const { crop, croppedImageUrl, src } = this.state;
 
     return (
-      <div className="App">
-        <div>
+      <div style={{marginBottom: '2rem'}}>
+        <div style={{marginBottom: '4rem'}}>
 
     <label className="PurpleButton" for="group_image">{this.props.label}</label>
             <input style={{display: 'none'}} id="group_image" type="file" accept="image/*" onChange={this.onSelectFile} />

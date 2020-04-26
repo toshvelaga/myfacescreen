@@ -8,7 +8,7 @@ const Fold_3_Custom = (props) => {
     return (<>
         <div style={{display: props.display}} className="part3">
             <p style={{marginTop: '10rem', marginBottom: '2rem'}}>Let's create your face screen.</p>
-            <div style={{width: 'auto', height: '250px', display: 'inline-block'}}>
+            <div style={{width: '60%', height: 'auto', display: 'inline-block', marginBottom: '5rem'}}>
                 <Cropper label="Upload an image" />            
             </div>
 
