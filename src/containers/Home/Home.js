@@ -7,6 +7,7 @@ import HomeDividerTwo from '../../components/HomeDividerTwo/HomeDividerTwo';
 import OrangeButton from '../../components/Buttons/OrangeButton/OrangeButton'
 import GreyBtn from '../../components/Buttons/GreyButton/GreyButton';
 import Footer from '../../components/Footer/Footer';
+import CarouselHome from '../../components/Carousel/Carousel';
 
 import { Link } from 'react-router-dom'
 
@@ -14,10 +15,11 @@ class Home extends Component {
     state = {  }
     render() { 
         return (<>
-            <Header />
+            {/* <Header /> */}
             <HeaderTitle />
             <Navbar />
-            <HeroImageHome />
+            <CarouselHome />
+            {/* <HeroImageHome /> */}
             <HomeDividerTwo />
             <Link to="get-started">
                 <span style={{marginRight: '.8rem'}}>

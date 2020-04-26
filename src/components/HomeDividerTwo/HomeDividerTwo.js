@@ -7,7 +7,7 @@ import './HomeDividerTwo.css'
 const HomeDividerTwo = () => {
     return (<>
     <div className="HomeDividerTwo">
-        <h1 style={{color: '#54453e'}}>Need some recommendations? Easy.</h1>
+        <h1 style={{color: '#54453e'}}>Beautiful customized face masks. </h1>
         <p style={{color: 'gray'}}>Tell us about who you are and we'll create a custom mask for you.</p>
         <img src={ GSWMask }/>
     </div>
