@@ -31,7 +31,7 @@
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
+  z-index: 2; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
   background-color: #252324;
@@ -42,6 +42,7 @@
 
 /* The navigation menu links */
 .sidenav a {
+  white-space: nowrap;
   padding: 12px;
   text-align: left;
   margin-left: 2rem;
@@ -50,7 +51,23 @@
   font-weight: bold;
   color: #b9b9b9;
   display: block;
-  transition: 0.3s;
+  /* transition: 0.3s; */
+}
+
+.sidenav > hr {
+  text-align: left;
+  margin-left: 2.5rem;
+  display: block;
+  width: 50%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.sidenav > section {
+  white-space: nowrap;
+  text-align: left;
+  margin-left: 2.5rem;
+  margin-top: 4rem;
 }
 
 /* When you mouse over the navigation links, change their color */
