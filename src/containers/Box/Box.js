@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import HeaderTitle from '../../components/HeaderTitle/HeaderTitle'
 import Hr from '../../components/Hr/Hr'
-import noun_box_2 from '../../assets/noun_box_2.svg'
+import BrownBox from '../../assets/BrownBox.svg'
+import { Link } from 'react-router-dom'
 
 class Box extends Component {
     state = {  }
@@ -12,8 +13,9 @@ class Box extends Component {
             <HeaderTitle />
             <Navbar />
             <Hr />
-            <img src={noun_box_2} style={{height: '20rem', width: '20rem'}} />
+            <img src={BrownBox} style={{height: '20rem', width: '20rem', marginTop: '2rem'}} />
             <h2 style={{color: '#55473e'}}>Your Box is currently empty.</h2>
+            <Link to="/get-started" style={{textDecoration: 'none', color: '#0378d8'}}><p>Let's Get Started to change that.</p></Link>
         </div>
         </>);
     }

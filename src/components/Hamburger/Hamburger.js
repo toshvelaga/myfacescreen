@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { signOut } from '../../store/actions/actions'
 import usaflag from '../../assets/usa-flag.svg'
+import Xicon from '../../assets/Xicon.svg'
 
 // codepen: https://codepen.io/designcouch/pen/Atyop
 
@@ -11,7 +12,7 @@ const Hamburger = (props) => {
 
     return (<>
     <div id="mySidenav" style={{width: props.width}} className="sidenav">
-        <a className="closebtn" onClick={props.closeNav}>&times;</a>
+        <a className="closebtn" onClick={props.closeNav}><img style={{width: '20px', height: '20px'}} src={Xicon} /></a>
         <Link onClick={props.closeNav} to="/home">HOME</Link>
         <Link to="/get-started">GET STARTED</Link>
         <Link to="/how-it-works">HOW IT WORKS</Link>

@@ -5,6 +5,8 @@ import FemaleFaceMask from '../../assets/Products/FemaleFaceMask.jpg'
 import GiantsMask from '../../assets/Products/GiantsMask.jpg'
 import ManWoman from '../../assets/Products/ManWoman.jpg'
 
+// https://www.npmjs.com/package/react-responsive-carousel
+
 class CarouselHome extends Component {
     state = {  }
     render() { 
