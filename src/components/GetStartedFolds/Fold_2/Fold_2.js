@@ -1,13 +1,17 @@
 import React from 'react';
 import SquareButton from '../../Buttons/SquareButton/SquareButton'
 import { connect } from 'react-redux'
+import Typography from '@material-ui/core/Typography';
 
 import './Fold_2.css'
 
 const Fold_2 = (props) => {
     return (
     <div style={{display: props.display}} className="part2">
-        <p>Choose your image.</p>
+        <Typography style={{marginBottom: '1rem', marginTop: '4rem'}} component="h1" variant="h6">
+            Choose your image.
+        </Typography>
+        {/* <p>Choose your image.</p> */}
         <div onClick={props.toggleClass1} className={!props.usedFace ? "part2card" : "part2card-selected"}><p>Use my face.</p></div>
         <div onClick={props.toggleClass2} className={!props.uploadedDesign ? "part2card" : "part2card-selected"}><p>Upload my own design.</p></div>
         <div>
