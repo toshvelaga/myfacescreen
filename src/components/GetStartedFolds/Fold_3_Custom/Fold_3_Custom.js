@@ -13,10 +13,10 @@ const Fold_3_Custom = (props) => {
                 <Cropper label="Upload an image" />            
             </div>
 
-            <div style={{marginTop: '20rem'}}>
+            <div style={{marginTop: '16rem'}}>
                 <p>Looks good. Now select the outline.</p>
                 <div style={{marginTop: '2rem'}}>
-                    <SquareButton fx={() => { props.showFold_4(); props.segment() }} />
+                    <SquareButton disabled={props.disable} title={'Upload an image'} fx={() => { props.showFold_4(); props.segment() }} />
                 </div>
             </div>
         </div>
@@ -26,6 +26,7 @@ const Fold_3_Custom = (props) => {
 const mapStateToProps = (state) => {
     return {
         display: state.foldReducer.Fold_3,
+        disable: state.disabledReducer.Fold_3_SqBtn,
     }
 }
 

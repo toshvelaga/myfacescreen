@@ -31,7 +31,7 @@ const Fold_3_Selfie = (props) => {
 const mapStateToProps = (state) => {
     return {
         display: state.foldReducer.Fold_3,
-        disable: state.disabledReducer.Fold_3_Selfie_SqBtn,
+        disable: state.disabledReducer.Fold_3_SqBtn,
     }
 }
 

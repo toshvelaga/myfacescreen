@@ -15,7 +15,9 @@ export const SEGMENT_5 = "SEGMENT_5"
 export const SEGMENT_6 = "SEGMENT_6"
 export const SEGMENT_7 = "SEGMENT_7"
 
-export const ENABLE_FOLD_3_SELFIE = "ENABLE_FOLD_3_SELFIE"
+export const ENABLE_FOLD_3 = "ENABLE_FOLD_3"
+export const ENABLE_FOLD_5 = "ENABLE_FOLD_5"
+export const ENABLE_FOLD_6 = "ENABLE_FOLD_6"
 
 export const USE_FACE = "USE_FACE"
 export const UPLOAD_DESIGN = "UPLOAD_DESIGN"

@@ -118,7 +118,7 @@ class Cropper extends PureComponent {
 const mapDispatchToProps = dispatch => {
   return {
     // dispatching plain actions
-    enableBtn: () => dispatch({type: 'ENABLE_FOLD_3_SELFIE'}),
+    enableBtn: () => dispatch({type: 'ENABLE_FOLD_3'}),
   }
 }
 

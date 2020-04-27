@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import firebase from '../../firebase/fbConfig'
+import { connect } from 'react-redux'
 
 var provider = new firebase.auth.GoogleAuthProvider();
 
@@ -25,6 +26,7 @@ class SignUpWithGoogle extends Component {
             var credential = error.credential;
             // ...
           });
+          this.props.enable_5_Btn()
     }
 
     render() { 
@@ -44,5 +46,12 @@ class SignUpWithGoogle extends Component {
         </>);
     }
 }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+      enable_5_Btn: () => dispatch({type: 'ENABLE_FOLD_5'}),
+    //   enableBtn: () => dispatch({type: 'ENABLE_FOLD_3'}),
+    }
+  }
  
-export default SignUpWithGoogle;
+export default connect(null, mapDispatchToProps)(SignUpWithGoogle);
