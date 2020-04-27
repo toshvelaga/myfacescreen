@@ -16,14 +16,14 @@ const Fold_3_Selfie = (props) => {
             <Cropper label="Upload my face" />            
         </div>
 
-        <div style={{marginTop: '20rem'}}>
+        <div style={{marginTop: '16rem'}}>
             <p>Don't like your selfie? Try again.</p>
             {/* <PurpleButton name="Click to add another member" /> */}
             <div style={{marginTop: '2rem'}}>
-                <SquareButton fx={() => { props.showFold_4(); props.segment()}} />
+                <SquareButton disabled={props.disable} title={'Upload an image'} fx={() => { props.showFold_4(); props.segment()}} />
             </div>
         </div>
-
+        {console.log(props)}
     </div>
     </>);
 }
@@ -31,6 +31,7 @@ const Fold_3_Selfie = (props) => {
 const mapStateToProps = (state) => {
     return {
         display: state.foldReducer.Fold_3,
+        disable: state.disabledReducer.Fold_3_Selfie_SqBtn,
     }
 }
 

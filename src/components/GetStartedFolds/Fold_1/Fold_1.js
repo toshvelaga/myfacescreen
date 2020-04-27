@@ -1,5 +1,4 @@
 import React from 'react';
-// import facemask_BLACK from '../../../assets/facemask_BLACK.png'
 import SquareButton from '../../Buttons/SquareButton/SquareButton'
 import whitefacemask from '../../../assets/GetStarted/whitefacemask.jpg'
 import { connect } from 'react-redux'
@@ -8,10 +7,6 @@ import './Fold_1.css'
 
 const Fold_1 = (props) => {
     return (
-
-        // color: '#54453e'
-        // color: 'gray'
-
         <div className="Fold_1">
             <p style={{width: '60%', display: 'inline-block'}}>We start with a blank white mask and let you choose an image to print over it. After you fill out your contact info we will get in touch with you. The whole proccess should take less than 10 minutes. Let's get started.</p>
             <img src={whitefacemask} style={{width: '80%', height: 'auto'}} />

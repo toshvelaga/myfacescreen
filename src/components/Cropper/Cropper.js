@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import ReactCrop from 'react-image-crop';
 import 'react-image-crop/dist/ReactCrop.css';
+import { connect } from 'react-redux'
 
 class Cropper extends PureComponent {
   state = {
@@ -19,6 +20,8 @@ class Cropper extends PureComponent {
         this.setState({ src: reader.result })
       );
       reader.readAsDataURL(e.target.files[0]);
+      console.log('uploaded image');
+      this.props.enableBtn();
     }
   };
 
@@ -90,7 +93,7 @@ class Cropper extends PureComponent {
       <div style={{marginBottom: '2rem'}}>
         <div style={{marginBottom: '4rem'}}>
 
-    <label className="PurpleButton" for="group_image">{this.props.label}</label>
+    <label className="PurpleButton" htmlFor="group_image">{this.props.label}</label>
             <input style={{display: 'none'}} id="group_image" type="file" accept="image/*" onChange={this.onSelectFile} />
 
         </div>
@@ -112,4 +115,11 @@ class Cropper extends PureComponent {
   }
 }
 
-export default Cropper;
+const mapDispatchToProps = dispatch => {
+  return {
+    // dispatching plain actions
+    enableBtn: () => dispatch({type: 'ENABLE_FOLD_3_SELFIE'}),
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Cropper);

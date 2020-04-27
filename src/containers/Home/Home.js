@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Header from '../../components/Header/Header';
 import HeaderTitle from '../../components/HeaderTitle/HeaderTitle';
 import Navbar from '../../components/Navbar/Navbar'
-import HeroImageHome from '../../components/HeroImageHome/HeroImageHome';
 import HomeDividerTwo from '../../components/HomeDividerTwo/HomeDividerTwo';
 import OrangeButton from '../../components/Buttons/OrangeButton/OrangeButton'
 import GreyBtn from '../../components/Buttons/GreyButton/GreyButton';

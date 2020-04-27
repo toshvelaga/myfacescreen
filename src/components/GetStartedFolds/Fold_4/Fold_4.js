@@ -4,8 +4,6 @@ import { connect } from 'react-redux'
 import SquareButton from '../../Buttons/SquareButton/SquareButton'
 import Typography from '@material-ui/core/Typography';
 
-import facemask_BLACK from '../../../assets/facemask_BLACK.png'
-
 const Fold_4 = (props) => {
     return (        
 

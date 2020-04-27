@@ -5,7 +5,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 const SquareButton = (props) => {
     return (
-        <button onClick={props.fx} className="SquareButton">
+        <button disabled={props.disabled} onClick={props.fx} title={props.title} className="SquareButton">
             <FontAwesomeIcon icon={faChevronDown} />
         </button>
     );

@@ -5,12 +5,13 @@ import Grid from '@material-ui/core/Grid';
 import OrangeButton from '../../components/Buttons/OrangeButton/OrangeButton'
 import Hr from '../../components/Hr/Hr'
 import Footer from '../../components/Footer/Footer'
-import startflag from '../../assets/start.svg'
-import selfie from '../../assets/selfie.svg'
-import bluemask from '../../assets/bluemask.svg'
-import freedelivery from '../../assets/freedelivery.svg'  
-import mail from '../../assets/mail.svg'
-import shield2 from '../../assets/shield2.svg'
+
+import startflag from '../../assets/HowItWorks/start.svg'
+import selfie from '../../assets/HowItWorks/selfie.svg'
+import bluemask from '../../assets/HowItWorks/bluemask.svg'
+import freedelivery from '../../assets/HowItWorks/freedelivery.svg'  
+import mail from '../../assets/HowItWorks/mail.svg'
+import shield2 from '../../assets/HowItWorks/shield2.svg'
 
 import { Link } from "react-router-dom"
 
