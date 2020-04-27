@@ -32,6 +32,7 @@ class SignUp extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     this.props.signUp(this.state)
+    this.props.enable_5_Btn()
   }
 
   render() {
@@ -151,7 +152,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    signUp: (newUser) => dispatch(signUp(newUser))
+    signUp: (newUser) => dispatch(signUp(newUser)),
+    enable_5_Btn: () => dispatch({type: 'ENABLE_FOLD_5'}),
   }
 }
 
