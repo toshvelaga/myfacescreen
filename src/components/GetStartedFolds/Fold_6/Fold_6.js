@@ -12,7 +12,7 @@ const Fold_6 = (props) => {
             <p>WHERE SHOULD WE SHIP?</p>
             <Shipping />
             <div style={{marginTop: '2rem'}}>
-                <SquareButton fx={() => {props.showFold_7(); props.segment()}}/>
+                <SquareButton disabled={props.disable} title={'Enter in your shipping info'} fx={() => {props.showFold_7(); props.segment()}}/>
             </div>
         </div>
     </>);
@@ -21,7 +21,8 @@ const Fold_6 = (props) => {
 const mapStateToProps = (state) => {
     return {
         display: state.foldReducer.Fold_6,
-        auth: state.firebase.auth
+        auth: state.firebase.auth,
+        disable: state.disabledReducer.Fold_6_SqBtn,
     }
 }
 

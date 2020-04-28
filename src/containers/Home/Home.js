@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Header from '../../components/Header/Header';
 import HeaderTitle from '../../components/HeaderTitle/HeaderTitle';
 import Navbar from '../../components/Navbar/Navbar'
-import HeroImageHome from '../../components/HeroImageHome/HeroImageHome';
 import HomeDividerTwo from '../../components/HomeDividerTwo/HomeDividerTwo';
 import OrangeButton from '../../components/Buttons/OrangeButton/OrangeButton'
 import GreyBtn from '../../components/Buttons/GreyButton/GreyButton';
@@ -10,6 +9,8 @@ import Footer from '../../components/Footer/Footer';
 import CarouselHome from '../../components/Carousel/Carousel';
 
 import { Link } from 'react-router-dom'
+
+import './Home.css'
 
 class Home extends Component {
     state = {  }
@@ -27,7 +28,7 @@ class Home extends Component {
                 </span>
             </Link>
             <Link to="products">
-                <span style={{marginLeft: '.8rem'}}>
+                <span className="GreyBtnHome" style={{marginLeft: '.8rem'}}>
                     <GreyBtn text="See Products" />
                 </span>
             </Link>

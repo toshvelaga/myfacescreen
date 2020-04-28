@@ -1,0 +1,16 @@
+.part7 {
+    width: 60%;
+    display: inline-block;
+}  
+
+@media only screen and (max-width: 700px) {
+    .part7 {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+    .part7 {
+    width: 40%;
+  }
+}

@@ -49,6 +49,7 @@ class Shipping extends Component {
       City: this.state.City,
       State: store.getState().selectedReducer.selected_state
     })
+    this.props.enable_6_Btn()
   }
 
   render() {
@@ -180,7 +181,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    // signUp: (newUser) => dispatch(signUp(newUser))
+    segment: () => dispatch({type: 'SEGMENT_7'}),
+    enable_6_Btn: () => dispatch({type: 'ENABLE_FOLD_6'}),
   }
 }
 

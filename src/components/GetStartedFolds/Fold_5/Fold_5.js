@@ -11,7 +11,8 @@ const Fold_5 = (props) => {
         <div style={{marginTop: '10rem', display: props.display}} className="part5">
             <SignUp />
             <br></br>
-            <SquareButton fx={() => { props.showFold_6(); props.segment() }}/>
+            <SquareButton disabled={props.disable} title={'Enter in your info'} fx={() => { props.showFold_6(); props.segment() }}/>
+            {console.log(props)}
         </div>
     </>);
 }
@@ -19,6 +20,7 @@ const Fold_5 = (props) => {
 const mapStateToProps = (state) => {
     return {
         display: state.foldReducer.Fold_5,
+        disable: state.disabledReducer.Fold_5_SqBtn,
     }
 }
 

@@ -11,6 +11,8 @@ import Fold_6 from '../../components/GetStartedFolds/Fold_6/Fold_6';
 import Fold_7 from '../../components/GetStartedFolds/Fold_7/Fold_7'; 
 import { connect } from 'react-redux'
 import ProgressBar from '../ProgressBar/ProgressBar'
+import Fold_4_Mask from '../../components/GetStartedFolds/Fold_4_Mask/Fold_4_Mask';
+
 import './GetStarted.css'
 
 class GetStarted extends Component {
@@ -35,6 +37,7 @@ class GetStarted extends Component {
         {this.props.USE_FACE ?  <Fold_3_Selfie /> : <Fold_3_Custom />}
 
         {/* FOLD 4 */}
+        {/* <Fold_4_Mask /> */}
 
         <Fold_4 />
         
