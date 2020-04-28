@@ -10,6 +10,8 @@ import CarouselHome from '../../components/Carousel/Carousel';
 
 import { Link } from 'react-router-dom'
 
+import './Home.css'
+
 class Home extends Component {
     state = {  }
     render() { 
@@ -26,7 +28,7 @@ class Home extends Component {
                 </span>
             </Link>
             <Link to="products">
-                <span style={{marginLeft: '.8rem'}}>
+                <span className="GreyBtnHome" style={{marginLeft: '.8rem'}}>
                     <GreyBtn text="See Products" />
                 </span>
             </Link>
