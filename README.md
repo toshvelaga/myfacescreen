@@ -27,4 +27,6 @@ You will also see any lint errors in the console.
 `npm install` to install node modules
 `npm start` to run on localhost
 
+### RoadMap and Development
 
+Development paused as founder pivoted to a new business. 
