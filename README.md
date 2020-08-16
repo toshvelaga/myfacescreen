@@ -1,8 +1,20 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Name
+Face Mask Screen
 
-## Available Scripts
+## Description
+Eccomerce website built to gauge customer interest in receiving customized face masks.
 
-In the project directory, you can run:
+## Visuals
+
+<span style="display:block" class="note">
+
+  <img src="https://facemaskscreen.s3.amazonaws.com/facehome.png" height="400px">
+  <img src="https://facemaskscreen.s3.amazonaws.com/slidingscreen.png" height="400px">
+  <img src="https://facemaskscreen.s3.amazonaws.com/faceemptybox.png" height="400px">
+  <img src="https://facemaskscreen.s3.amazonaws.com/facecustomized.png" height="400px">
+  <img src="https://facemaskscreen.s3.amazonaws.com/faceorangebutton.png" height="400px">
+
+</span>
 
 ### `yarn start`
 
